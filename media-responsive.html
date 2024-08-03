@@ -1,0 +1,852 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="robots" content="index,follow">
+    <link rel="icon" href="ico/favicon.png">
+
+	<title>WebInix Technologies</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- Color -->
+    <link id="skin" href="skins/default.css" rel="stylesheet">
+
+</head>
+<body>
+	<!-- Start preloading -->
+	<div id="loading" class="loading-invisible">
+		<div class="loading-center">
+			<div class="loading-center-absolute">
+				<div class="object" id="object_one"></div>
+				<div class="object" id="object_two"></div>
+				<div class="object" id="object_three"></div>
+			</div>
+			<p>Please wait...</p>
+		</div>
+	</div>
+	<!-- End preloading -->
+
+	<!-- Start top section -->
+	<div class="top-wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<ul class="top-social-network">
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+						<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+						<li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+						<li><a href="#"><i class="fa fa-skype"></i></a></li>
+						<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+						<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+						<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+						<li><a href="#"><i class="fa fa-trambl"></i></a></li>
+					</ul>
+				</div>
+				
+				<div class="col-md-6">
+					<form class="select-language floatright">
+						<select name="tech" class="tech" id="tech">
+							<option value="english" data-image="img/flag/uk.png" id="english">English</option>
+							<option value="spanish" data-image="img/flag/sp.png" id="spanish">Spanish</option>
+							<option value="portuguese" data-image="img/flag/por.png" id="portuguese">Portuguese</option>
+							<option value="arabic" data-image="img/flag/arb.png" id="arabic">Arabic</option>
+							<option value="russian" data-image="img/flag/rus.png" id="russian">Russian</option>
+							<option value="japanese" data-image="img/flag/jap.png" id="japanese">Japanese</option>
+							<option value="chinese" data-image="img/flag/ch.png" id="chinese">Chinese</option>
+						</select>
+					</form>
+					<ul class="right-link sign-link">
+						<li><a href="#" class="signin">Sign in</a></li>
+						<li>or</li>
+						<li><a href="#" class="signup">Join now</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End top section -->
+	
+	<div class="clearfix"></div>
+	
+    <!-- Start Navigation -->
+    <nav class="navbar navbar-default navbar-sticky bootsnav">
+
+        <!-- Start Top Search -->
+        <div class="top-search">
+            <div class="container">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                    <input type="text" class="form-control" placeholder="Type something ann hit enter">
+                    <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+                </div>
+            </div>
+        </div>
+        <!-- End Top Search -->
+
+        <div class="container">            
+            <!-- Start Atribute Navigation -->
+            <div class="attr-nav">
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
+                            <i class="fa fa-shopping-bag"></i>
+                            <span class="badge">3</span>
+                        </a>
+                        <ul class="dropdown-menu cart-list">
+                            <li>
+                                <a href="#" class="photo"><img src="img/product/thumbs/thumb01.jpg" class="cart-thumb" alt="" /></a>
+                                <h6><a href="#">Delica omtantur </a></h6>
+                                <p>2x - <span class="price">$99.99</span></p>
+                            </li>
+                            <li>
+                                <a href="#" class="photo"><img src="img/product/thumbs/thumb02.jpg" class="cart-thumb" alt="" /></a>
+                                <h6><a href="#">Omnes ocurreret</a></h6>
+                                <p>1x - <span class="price">$33.33</span></p>
+                            </li>
+                            <li>
+                                <a href="#" class="photo"><img src="img/product/thumbs/thumb03.jpg" class="cart-thumb" alt="" /></a>
+                                <h6><a href="#">Agam facilisis</a></h6>
+                                <p>2x - <span class="price">$99.99</span></p>
+                            </li>
+                            <li class="total">
+                                <span class="pull-right"><strong>Total</strong>: $0.00</span>
+                                <a href="#" class="btn-checkout">Checkout</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
+                </ul>
+            </div>
+            <!-- End Atribute Navigation -->
+
+            <!-- Start Header Navigation -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#brand"><img src="img/brand/logo-black.png" class="logo" alt=""></a>
+            </div>
+            <!-- End Header Navigation -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                    <li><a href="#">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Page</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" >About</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="about.html">About Alt1</a></li>
+                                    <li><a href="about-alt1.html">About Alt2</a></li>
+                                    <li><a href="about-alt2.html">About Alt3</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Services</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="services.html">Services Alt1</a></li>
+                                    <li><a href="services-alt1.html">Services Alt2</a></li>
+                                    <li><a href="services-alt2.html">Services Alt3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="faq.html">Faq</a></li>
+							<li><a href="site-map.html">Site map</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Dropdown</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Menu alt</a></li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Submenu</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Menu alt</a></li>
+                                            <li><a href="#">Menu alt</a></li>
+                                            <li><a href="#">Menu alt</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Menu alt</a></li>
+                                    <li><a href="#">Menu alt</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Blog</a>
+                        <ul class="dropdown-menu">
+							<li><a href="blog-leftsidebar.html">Blog left sidebar</a></li>
+							<li><a href="blog-rightsidebar.html">Blog right sidebar</a></li>
+							<li><a href="blog-rightsidebar.html">Blog magazine</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Single Post</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="singlepost-leftsidebar.html">Singlepost left sidebar</a></li>
+                                    <li><a href="singlepost-rightsidebar.html">Singlepost right sidebar</a></li>
+                                    <li><a href="singlepost-magazine.html">Singlepost magazine</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Portfolio</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="portfolio-alt1.html">Portfolio alt1</a></li>
+							<li><a href="portfolio-alt2.html">Portfolio alt2</a></li>
+							<li><a href="portfolio-alt3.html">Portfolio alt3</a></li>
+							<li><a href="portfolio-alt4.html">Portfolio alt4</a></li>
+							<li><a href="portfolio-alt5.html">Portfolio alt5</a></li>
+							<li><a href="portfolio-alt6.html">Portfolio alt6</a></li>
+							<li><a href="portfolio-alt7.html">Portfolio alt7</a></li>
+							<li><a href="portfolio-alt8.html">Portfolio alt8</a></li>
+							<li><a href="portfolio-alt9.html">Portfolio alt9</a></li>
+							<li><a href="portfolio-alt10.html">Portfolio alt10</a></li>
+							<li><a href="portfolio-detail.html">Portfolio detail</a></li>
+							<li><a href="portfolio-detail-alt1.html">Portfolio detail alt1</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown megamenu-fw active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Components</a>
+                        <ul class="dropdown-menu megamenu-content" role="menu">
+                            <li>
+                                <div class="row">
+                                    <div class="col-menu col-md-3">
+                                        <h6 class="title">Interactive</h6>
+                                        <div class="content">
+                                            <ul class="menu-col">
+                                                <li><a href="call-to-action.html"><i class="fa fa-microphone"></i> Call to action</a></li>
+                                                <li><a href="counter.html"><i class="fa fa-pie-chart"></i> Counter</a></li>
+                                                <li><a href="maps.html"><i class="fa fa-map-o"></i> Google maps</a></li>
+                                                <li><a href="media-responsive.html"><i class="fa fa-film"></i> Media responsive</a></li>
+                                                <li><a href="modal.html"><i class="fa fa-external-link"></i> Modal</a></li>
+                                                <li><a href="process.html"><i class="fa fa-hourglass-1"></i> Process</a></li>
+                                                <li><a href="progress.html"><i class="fa fa-server"></i> Progress bar</a></li>
+                                                <li><a href="pricing.html"><i class="fa fa-shopping-bag"></i> Pricing</a></li>
+                                                <li><a href="team.html"><i class="fa fa-users"></i> Team</a></li>
+                                                <li><a href="testimoni.html"><i class="fa fa-comments"></i> Testimoni</a></li>
+                                            </ul>
+                                        </div>
+                                    </div><!-- end col-3 -->
+                                    <div class="col-menu col-md-3">
+                                        <h6 class="title">Elements</h6>
+                                        <div class="content">
+                                            <ul class="menu-col">
+												<li><a href="accordion.html"><i class="fa fa-navicon"></i> Accordion</a></li>
+                                                <li><a href="alert.html"><i class="fa fa-info-circle"></i> Alert</a></li>
+                                                <li><a href="button.html"><i class="fa fa-download"></i> Button</a></li>
+                                                <li><a href="form.html"><i class="fa fa-unlock-alt"></i> Form</a></li>
+                                                <li><a href="icon.html"><i class="fa fa-flag"></i> Icons style</a></li>
+                                                <li><a href="icon-box.html"><i class="fa fa-inbox"></i> Icons with box</a></li>
+												<li><a href="icon-text.html"><i class="fa fa-star"></i> Icons with text</a></li>
+                                                <li><a href="images.html"><i class="fa fa-image"></i> Images style</a></li>
+												<li><a href="pagination.html"><i class="fa fa-sort-numeric-asc"></i> Pagination</a></li>
+												<li><a href="tab.html"><i class="fa fa-tasks"></i> Tab style</a></li>
+                                            </ul>
+                                        </div>
+                                    </div><!-- end col-3 -->
+                                    <div class="col-menu col-md-3">
+                                        <h6 class="title">Typography & MLsc</h6>
+                                        <div class="content">
+                                            <ul class="menu-col">                                                
+                                                <li><a href="typography.html"><i class="fa fa-font"></i> Typography</a></li>
+                                                <li><a href="heading.html"><i class="fa fa-header"></i> Heading</a></li>
+                                                <li><a href="blockquote.html"><i class="fa fa-quote-left"></i> Blockquote</a></li>
+                                                <li><a href="columns.html"><i class="fa fa-th"></i> Columns</a></li>
+                                                <li><a href="divider.html"><i class="fa fa-file-text-o"></i> Separators</a></li>
+                                                <li><a href="dropcaps.html"><i class="fa fa-th-list"></i> Dropcaps</a></li>
+                                                <li><a href="highlights.html"><i class="fa fa-list-alt"></i> Highlights</a></li>
+                                                <li><a href="list.html"><i class="fa fa-list-ol"></i> List style</a></li>
+                                            </ul>
+                                        </div>
+                                    </div><!-- end col-3 -->
+                                    <div class="col-menu col-md-3">
+                                        <h6 class="title">Speciality page</h6>
+                                        <div class="content">
+                                            <ul class="menu-col">
+                                                <li><a href="error404.html"><i class="fa fa-warning"></i> Error 404</a></li>
+                                                <li><a href="maintenance.html"><i class="fa fa-cogs"></i> Maintenance</a></li>
+                                                <li><a href="signin.html"><i class="fa fa-sign-in"></i> Signin</a></li>
+                                                <li><a href="signup.html"><i class="fa fa-sign-out"></i> Signin</a></li>
+												<li><a href="underconstruction.html"><i class="fa fa-wrench"></i> Underconstruction</a></li>
+                                            </ul>
+                                        </div>
+                                    </div><!-- end col-3 -->
+                                </div><!-- end row -->
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Shop</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Shop page</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="shop.html">Shop page alt1</a></li>
+                                    <li><a href="shop-alt1.html">Shop page alt2</a></li>
+									<li><a href="shop-alt2.html">Shop page alt3</a></li>
+									<li><a href="shop-alt3.html">Shop page alt4</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="shop-detail.html">Shop detail</a></li>
+                            <li><a href="shopping-cart.html">Shopping cart</a></li>
+                            <li><a href="shopping-checkout.html">Checkout</a></li>
+                        </ul>
+                    </li>
+					<li><a href="contact.html">Contact us</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div>   
+    </nav>
+    <!-- End Navigation -->
+	
+	<!-- Start inner page header -->
+	<div class="innerheader-wrapp">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2><i class="fa fa-film"></i> Components <span>media</span></h2>
+					<ol class="breadcrumb">
+						<li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+						<li><a href="#"><i class="fa fa-gift"></i> Components</a></li>
+						<li class="active"><i class="fa fa-film"></i> Media</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End inner page header -->
+	
+	<div class="clearfix"></div>
+	
+	<!-- Start contain wrapp -->
+	<div class="contain-wrapp padding-top40 padding-bot40">	
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<h5>Image responsive</h5>
+					<div class="img-wrapper">
+						<div class="img-caption link-zoom primary capZoomInDown">
+							<div class="caption-content">
+								<div>
+									<a href="portfolio-detail.html"><i class="fa fa-link icon-circle fa-3x"></i></a>
+									<a href="img/gallery/670x544/img01.jpg" data-pretty="prettyPhoto"><i class="fa fa-search icon-circle fa-3x"></i></a>
+									<h5><a href="#">Project title here</a></h5>
+									<p>
+									Web design
+									</p>
+								</div>
+							</div>
+						</div>
+						<img src="img/gallery/670x544/img01.jpg" class="img-responsive" alt="" />
+					</div>
+					<!-- Start Shortcode -->
+                    <div class="panel-group margintop20" id="accordion1">
+                        <div class="panel panel-flat">
+                            <div class="panel-heading" id="heading1">
+                                <h6 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion1" href="#panel1" >
+                                        Shortcode
+                                    </a>
+                                </h6>
+                            </div>
+                            <div id="panel1" class="panel-collapse collapse">
+                                <div class="panel-body">
+<pre class="prettyprint linenums">
+&lt;div class="img-wrapper"&gt;
+	&lt;div class="img-caption link-zoom primary capZoomInDown"&gt;
+		&lt;div class="caption-content"&gt;
+			&lt;div&gt;
+				&lt;a href="portfolio-detail.html"&gt;&lt;i class="fa fa-link icon-circle fa-3x"&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href="img/gallery/670x544/img01.jpg" data-pretty="prettyPhoto"&gt;&lt;i class="fa fa-search icon-circle fa-3x"&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;h5&gt;&lt;a href="#"&gt;Project title here&lt;/a&gt;&lt;/h5&gt;
+				&lt;p&gt;Web design&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;img src="img/gallery/670x544/img01.jpg" class="img-responsive" alt="" /&gt;
+&lt;/div&gt;
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					<!-- End Shortcode -->
+				</div>
+				<div class="col-sm-6">
+					<h5>Embed video</h5>
+					<div class="media-wrapper embed-container">
+						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/iIRjiGDGOOQ"></iframe>
+					</div>
+					<!-- Start Shortcode -->
+                    <div class="panel-group margintop20" id="accordion2">
+                        <div class="panel panel-flat">
+                            <div class="panel-heading" id="heading2">
+                                <h6 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion2" href="#panel2" >
+                                        Shortcode
+                                    </a>
+                                </h6>
+                            </div>
+                            <div id="panel2" class="panel-collapse collapse">
+                                <div class="panel-body">
+<pre class="prettyprint linenums">
+&lt;div class="media-wrapper embed-container"&gt;
+	&lt;iframe class="embed-responsive-item" src="https://www.youtube.com/embed/iIRjiGDGOOQ"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					<!-- End Shortcode -->
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="divider margintop50"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<h5>Local video</h5>
+					<!-- Start video wrapp -->
+                    <div class="video-wrapper">
+                        <div class="play-icon small"><a href="#"><i class="fa fa-play"></i></a></div>
+                        <img src="img/video-half.jpg" class="img-responsive" alt="" />
+                        <div id="video1" class="jp-jplayer video"
+                             data-media="video"
+                             data-title="Video"
+                             data-m4v="video/idea.m4v"
+                             data-ogv="video/idea.ogv"
+                             data-webmv="video/idea.webm"
+                             data-container="#jp_container2"></div>
+                        <div id="jp_container2" class="jp-audio">
+                            <table class="table-audio">
+                                <tr>
+                                    <td class="toggle-play">
+                                        <a href="#" class="jp-play"><i class="fa fa-play-circle"></i></a>
+                                        <a href="#" class="jp-pause"><i class="fa fa-pause"></i></a>
+                                    </td>
+                                    <td class="time"><span class="jp-current-time"></span></td>
+                                    <td class="Progres-audio">
+                                        <div class="jp-progress">
+                                            <div class="jp-seek-bar">
+                                                <div class="jp-play-bar"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="time"><span class="jp-duration"></span></td>
+                                    <td class="toggle-mute">
+                                        <a href="#" class="jp-unmute"><i class="fa fa-volume-up"></i></a>
+                                          <a href="#" class="jp-mute"><i class="fa fa-volume-down"></i></a>
+                                    </td>
+                                    <td class="volume-bar">
+                                        <div class="jp-volume-bar">
+                                            <div class="jp-volume-bar-value"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="jp-no-solution">
+                                <strong>Update Required</strong>
+                                To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                            </div>
+                        </div>  
+                    </div>
+                    <!-- End video wrapp -->
+					<!-- Start Shortcode -->
+                    <div class="panel-group margintop20" id="accordion3">
+                        <div class="panel panel-flat">
+                            <div class="panel-heading" id="heading3">
+                                <h6 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion3" href="#panel3" >
+                                        Shortcode
+                                    </a>
+                                </h6>
+                            </div>
+                            <div id="panel3" class="panel-collapse collapse">
+                                <div class="panel-body">
+<pre class="prettyprint linenums">
+&lt;!-- Start video wrapp --&gt;
+&lt;div class="video-wrapper"&gt;
+	&lt;div class="play-icon small"&gt;&lt;a href="#"&gt;&lt;i class="fa fa-play"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/div&gt;
+	&lt;img src="img/video-half.jpg" class="img-responsive" alt="" /&gt;
+	&lt;div id="video1" class="jp-jplayer video"
+		data-media="video"
+		data-title="Big Buck Bunny"
+		data-m4v="video/idea.m4v"
+		data-ogv="video/idea.ogv"
+		data-webmv="video/idea.webm"
+		data-container="#jp_container2"&gt;&lt;/div&gt;
+	&lt;div id="jp_container2" class="jp-audio"&gt;
+		&lt;table class="table-audio"&gt;
+			&lt;tr&gt;
+			&lt;td class="toggle-play"&gt;
+				&lt;a href="#" class="jp-play"&gt;&lt;i class="fa fa-play-circle"&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href="#" class="jp-pause"&gt;&lt;i class="fa fa-pause"&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+			&lt;td class="time"&gt;&lt;span class="jp-current-time"&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;td class="Progres-audio"&gt;
+				&lt;div class="jp-progress"&gt;
+					&lt;div class="jp-seek-bar"&gt;
+						&lt;div class="jp-play-bar"&gt;&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/td&gt;
+			&lt;td class="time"&gt;&lt;span class="jp-duration"&gt;&lt;/span&gt;&lt;/td&gt;
+			&lt;td class="toggle-mute"&gt;
+				&lt;a href="#" class="jp-unmute"&gt;&lt;i class="fa fa-volume-up"&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href="#" class="jp-mute"&gt;&lt;i class="fa fa-volume-down"&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+			&lt;td class="volume-bar"&gt;
+				&lt;div class="jp-volume-bar"&gt;
+					&lt;div class="jp-volume-bar-value"&gt;&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;/table&gt;
+		&lt;div class="jp-no-solution"&gt;
+			&lt;strong&gt;Update Required&lt;/strong&gt;
+			To play the media you will need to either update your browser to a recent version or update your &lt;a href="http://get.adobe.com/flashplayer/" target="_blank"&gt;Flash plugin&lt;/a&gt;.
+		&lt;/div&gt;
+	&lt;/div&gt;  
+&lt;/div&gt;
+&lt;!-- End video wrapp --&gt;
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					<!-- End Shortcode -->
+				</div>
+				<div class="col-sm-6">
+					<h5>Local audio</h5>
+					<div class="media-wrapper">
+						<!-- Start Audio -->
+						<div id="audio1" class="jp-jplayer" 
+                             data-media="audio"
+                             data-sound="sound/bensound-acousticbreeze.mp3" 
+                             data-container="#jp_container1"></div>
+						<div id="jp_container1" class="jp-audio">
+							<table class="table-audio">
+								<tr>
+									<td class="toggle-play">
+										<a href="#" class="jp-play"><i class="fa fa-play-circle"></i></a>
+										<a href="#" class="jp-pause"><i class="fa fa-pause"></i></a>
+									</td>
+									<td class="time"><span class="jp-current-time"></span></td>
+									<td class="Progres-audio">
+										<div class="jp-progress">
+											<div class="jp-seek-bar">
+												<div class="jp-play-bar"></div>
+											</div>
+										</div>
+									</td>
+									<td class="time"><span class="jp-duration"></span></td>
+									<td class="toggle-mute">
+										<a href="#" class="jp-unmute"><i class="fa fa-volume-up"></i></a>
+										<a href="#" class="jp-mute"><i class="fa fa-volume-down"></i></a>
+									</td>
+									<td class="volume-bar">
+										<div class="jp-volume-bar">
+											<div class="jp-volume-bar-value"></div>
+										</div>
+									</td>
+								</tr>
+							</table>
+							<div class="jp-no-solution">
+								<strong>Update Required</strong>
+								To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+							</div>
+						</div>
+						<!-- End Audio -->
+					</div>
+					<!-- Start Shortcode -->
+                    <div class="panel-group margintop20" id="accordion4">
+                        <div class="panel panel-flat">
+                            <div class="panel-heading" id="heading4">
+                                <h6 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion4" href="#panel4" >
+                                        Shortcode
+                                    </a>
+                                </h6>
+                            </div>
+                            <div id="panel4" class="panel-collapse collapse">
+                                <div class="panel-body">
+<pre class="prettyprint linenums">
+&lt;div class="media-wrapper"&gt;
+	&lt;!-- Start Audio --&gt;
+	&lt;div id="audio1" class="jp-jplayer" 
+		data-media="audio"
+		data-sound="sound/bensound-acousticbreeze.mp3" 
+		data-container="#jp_container1"&gt;&lt;/div&gt;
+	&lt;div id="jp_container1" class="jp-audio"&gt;
+		&lt;table class="table-audio"&gt;
+			&lt;tr&gt;
+				&lt;td class="toggle-play"&gt;
+					&lt;a href="#" class="jp-play"&gt;&lt;i class="fa fa-play-circle"&gt;&lt;/i&gt;&lt;/a&gt;
+					&lt;a href="#" class="jp-pause"&gt;&lt;i class="fa fa-pause"&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;/td&gt;
+				&lt;td class="time"&gt;&lt;span class="jp-current-time"&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;td class="Progres-audio"&gt;
+					&lt;div class="jp-progress"&gt;
+						&lt;div class="jp-seek-bar"&gt;
+							&lt;div class="jp-play-bar"&gt;&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/td&gt;
+				&lt;td class="time"&gt;&lt;span class="jp-duration"&gt;&lt;/span&gt;&lt;/td&gt;
+				&lt;td class="toggle-mute"&gt;
+					&lt;a href="#" class="jp-unmute"&gt;&lt;i class="fa fa-volume-up"&gt;&lt;/i&gt;&lt;/a&gt;
+					&lt;a href="#" class="jp-mute"&gt;&lt;i class="fa fa-volume-down"&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;/td&gt;
+				&lt;td class="volume-bar"&gt;
+					&lt;div class="jp-volume-bar"&gt;
+						&lt;div class="jp-volume-bar-value"&gt;&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;/table&gt;
+		&lt;div class="jp-no-solution"&gt;
+			&lt;strong&gt;Update Required&lt;/strong&gt;
+			To play the media you will need to either update your browser to a recent version or update your &lt;a href="http://get.adobe.com/flashplayer/" target="_blank"&gt;Flash plugin&lt;/a&gt;.
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;!-- End Audio --&gt;
+&lt;/div&gt;
+</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					<!-- End Shortcode -->
+				</div>
+			</div>
+		</div>
+    </div>
+	<!-- End contain wrapp -->
+	
+	<!-- Start footer -->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="widget">
+						<img src="img/brand/logo-white.png" class="logo-footer" alt="" />
+						<p>
+						Nibh scriptorem ei pri, ei tation timeam nominati mei. Sit ex audire habemus, soleat fastidii deterruisset nam no. Graece admodum postulant cu sed, mel ei voluptua iracundia. Vis an platonem persecuti, at vel laoreet fuisset invenire.
+						</p>
+					</div>
+					<div class="widget">
+						<h5><span>Our</span> office</h5>
+						<ul class="office-contact">
+							<li>
+								<i class="fa fa-home"></i>
+								<h6>Address :</h6>
+								JL.Kemacentan selatan No.13 Block.Q2 Jakarta Indonesia
+							</li>
+							<li>
+								<i class="fa fa-phone"></i>
+								<h6>Phone :</h6>
+								(021) 1234 567 890
+							</li>
+							<li>
+								<i class="fa fa-envelope"></i>
+								<h6>Emali :</h6>
+								info@yourdomain.com
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="widget">
+						<h5><span>Latest</span> article</h5>
+						<ul class="recent-post-widget">
+							<li>
+								<a href="#" class="img-thumb"><img src="img/blog/thumbs/thumb01.jpg" class="img-responsive" alt="" /></a>
+								<h6><a href="#">Exerci intellegat te facete urbanitas no est</a></h6>
+								<p>
+								Nostrud disputationi sed in, nam ea altera deserunt. Veri malis constituam vel cu.
+								</p>
+							</li>
+							<li>
+								<a href="#" class="img-thumb"><img src="img/blog/thumbs/thumb02.jpg" class="img-responsive" alt="" /></a>
+								<h6><a href="#">Exerci intellegat te facete urbanitas no est</a></h6>
+								<p>
+								Nostrud disputationi sed in, nam ea altera deserunt. Veri malis constituam vel cu.
+								</p>
+							</li>
+							<li>
+								<a href="#" class="img-thumb"><img src="img/blog/thumbs/thumb03.jpg" class="img-responsive" alt="" /></a>
+								<h6><a href="#">Exerci intellegat te facete urbanitas no est</a></h6>
+								<p>
+								Nostrud disputationi sed in, nam ea altera deserunt. Veri malis constituam vel cu.
+								</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="widget">
+						<h5><span>Recent</span> portfolio</h5>
+						<ul class="recent-portfolio">
+							<li><a href="#"><img src="img/gallery/thumbs/thumb01.jpg" alt="" /></a></li>
+							<li><a href="#"><img src="img/gallery/thumbs/thumb02.jpg" alt="" /></a></li>
+							<li><a href="#"><img src="img/gallery/thumbs/thumb03.jpg" alt="" /></a></li>
+							<li><a href="#"><img src="img/gallery/thumbs/thumb04.jpg" alt="" /></a></li>
+							<li><a href="#"><img src="img/gallery/thumbs/thumb05.jpg" alt="" /></a></li>
+							<li><a href="#"><img src="img/gallery/thumbs/thumb06.jpg" alt="" /></a></li>
+							<li><a href="#"><img src="img/gallery/thumbs/thumb07.jpg" alt="" /></a></li>
+							<li><a href="#"><img src="img/gallery/thumbs/thumb08.jpg" alt="" /></a></li>
+							<li><a href="#"><img src="img/gallery/thumbs/thumb09.jpg" alt="" /></a></li>
+							<li><a href="#"><img src="img/gallery/thumbs/thumb10.jpg" alt="" /></a></li>
+							<li><a href="#"><img src="img/gallery/thumbs/thumb11.jpg" alt="" /></a></li>
+							<li><a href="#"><img src="img/gallery/thumbs/thumb12.jpg" alt="" /></a></li>	
+						</ul>
+					</div>
+					<div class="widget">
+						<h5><span>latest</span> tweet</h5>
+						<div class="tweet"></div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="widget">
+						<h5><span>Subscribe</span> newsletter</h5>
+						<!-- Start Subscribe -->
+						<form class="form-subscribe">
+							<input type="text" class="input-subscribe" placeholder="Enter your email address...">
+							<button class="btn btn-fiord btn-3d btn-icon-right icon-divider btn-block" type="button">Subscribe now<i class="fa fa-send"></i></button>
+						</form>
+						<!-- End Subscribe -->
+					</div>
+					<div class="widget">
+						<h5><span>Social</span> network</h5>
+						<a href="#" class="social-network"><i class="fa fa-facebook"></i></a>
+						<a href="#" class="social-network"><i class="fa fa-linkedin"></i></a>
+						<a href="#" class="social-network"><i class="fa fa-twitter"></i></a>
+						<a href="#" class="social-network"><i class="fa fa-google-plus"></i></a>
+						<a href="#" class="social-network"><i class="fa fa-youtube-play"></i></a>
+						<a href="#" class="social-network"><i class="fa fa-instagram"></i></a>
+						<a href="#" class="social-network"><i class="fa fa-tumblr"></i></a>
+						<a href="#" class="social-network"><i class="fa fa-behance"></i></a>
+						<a href="#" class="social-network"><i class="fa fa-skype"></i></a>
+						<a href="#" class="social-network"><i class="fa fa-pinterest"></i></a>
+						<a href="#" class="social-network"><i class="fa fa-dribbble"></i></a>
+						<a href="#" class="social-network"><i class="fa fa-flickr"></i></a>
+					</div>	
+					<div class="widget">
+						<h5><span>Explore</span> link</h5>
+						<ul class="link-list">
+							<li><a href="#">About us</a></li>
+							<li><a href="#">Our services</a></li>
+							<li><a href="#">Members</a></li>
+							<li><a href="#">Career</a></li>
+							<li><a href="#">Meet our team</a></li>
+							<li><a href="#">Support</a></li>
+							<li><a href="#">Help Center</a></li>
+							<li><a href="#">Blog</a></li>
+							<li><a href="#">Community</a></li>
+							<li><a href="#">Forum</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="subfooter">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<p>2017 &copy; Copyright <a href="http://99webpage.com/">99webpage.</a> All images content only for demos is not included in the download package</p>
+					</div>
+					<div class="col-md-6">
+						<ul>
+							<li><a href="#">About 99webpage</a></li>
+							<li><a href="#">Terms</a></li>
+							<li><a href="#">Privacy policy</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End footer -->
+	
+	<!-- Start to top -->  
+    <a href="#" class="toTop">
+        <i class="fa fa-chevron-up"></i>
+    </a>  
+    <!-- End to top -->
+	
+	<!-- START JAVASCRIPT -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+	<script src="js/loading.js"></script>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+	
+    <!-- easing -->
+	<script src="js/jquery.easing-1.3.min.js"></script>
+	
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+	
+    <!-- Bootsnavs -->
+    <script src="js/bootsnav.js"></script>
+
+	<!-- Custom form -->
+	<script src="js/form/jcf.js"></script>
+	<script src="js/form/jcf.scrollable.js"></script>
+	<script src="js/form/jcf.select.js"></script>
+	
+	<!-- Custom checkbox and radio -->
+	<script src="js/checkator/fm.checkator.jquery.js"></script>
+	<script src="js/checkator/setting.js"></script>
+	
+	<!-- Select language -->
+	<script src="js/selectdropdown/jquery.dd.min.js"></script>
+	<script src="js/selectdropdown/setting.js"></script>
+
+	<!-- google code prettify -->
+	<script src="js/google-code-prettify/prettify.js"></script>
+	
+    <!-- PrettyPhoto -->
+	<script src="js/prettyPhoto/jquery.prettyPhoto.js"></script>  
+	<script src="js/prettyPhoto/setting.js"></script>
+	
+    <!-- Player -->
+	<script src="js/jplayer/jquery.jplayer.js"></script>
+	<script src="js/jplayer/setting.js"></script>
+	
+    <!-- Twitter -->
+	<script src="js/twitter/tweetie.min.js"></script>
+	<script src="js/twitter/ticker.js"></script>
+	<script src="js/twitter/setting.js"></script>
+	
+    <!-- Custom -->
+    <script src="js/custom.js"></script>
+</body>
+</html>
