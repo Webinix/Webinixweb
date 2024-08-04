@@ -8873,6 +8873,11 @@ Custom bottom spacer
 }
 
 .marginbot20{
+	display: flex;
+    margin-bottom: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 	margin-bottom:20px;
 }
 
