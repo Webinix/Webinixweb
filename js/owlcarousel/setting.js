@@ -36,43 +36,47 @@ $(document).ready(function() {
 			}
 		}
 	});
-	$('.recent-3column').owlCarousel({
-		loop: true,
-		margin: 30,
-		autoplay: true,
-		autoplayTimeout: 11000,
-		smartSpeed: 1000,
-		responsiveClass: true,
-		responsive: {
+
+	$(document).ready(function(){
+		$('.recent-3column').owlCarousel({
+		  loop: true,                // Enable looping of items
+		  margin: 30,                // Set margin between items
+		  autoplay: true,           // Enable autoplay
+		  autoplayTimeout: 3000,    // Delay between transitions (5 seconds)
+		  smartSpeed: 1000,          // Speed of transition
+		  responsiveClass: true,    // Enable responsive behavior
+		  responsive: {
 			0: {
-				items: 1,
-				dots: false,
-				nav: true
+			  items: 1,             // Number of items to display on screens less than 767px wide
+			  dots: false,          // Disable dots on small screens
+			  nav: true             // Enable navigation arrows on small screens
 			},
 			767: {
-				items: 2,
-				dots: false,
-				nav: false
+			  items: 2,             // Number of items to display on screens 767px to 919px wide
+			  dots: false,          // Disable dots on medium screens
+			  nav: false            // Disable navigation arrows on medium screens
 			},
 			920: {
-				items: 2,
-				dots: false,
-				nav: false
+			  items: 2,             // Number of items to display on screens 920px to 978px wide
+			  dots: false,          // Disable dots on larger screens
+			  nav: false            // Disable navigation arrows on larger screens
 			},
 			979: {
-				items: 2,
-				dots: false,
-				nav: false
+			  items: 2,             // Number of items to display on screens 979px to 1198px wide
+			  dots: false,          // Disable dots on larger screens
+			  nav: false            // Disable navigation arrows on larger screens
 			},
 			1199: {
-				items: 3,
-				nav: true,
-				dots: false,
-				loop: false,
-				margin: 30
+			  items: 3,             // Number of items to display on screens 1199px and wider
+			  nav: true,            // Enable navigation arrows on larger screens
+			  dots: false,          // Disable dots on larger screens
+			  loop: false,          // Disable looping on larger screens
+			  margin: 30            // Set margin between items on larger screens
 			}
-		}
-	});
+		  }
+		});
+	  });
+	  
 	$('.recent-1column').owlCarousel({
 		loop: true,
 		items: 1,

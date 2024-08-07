@@ -557,7 +557,7 @@ p{
 }
 
 p:last-child{
-	margin: 0 29px;
+	/* margin: 0 29px; */
 	margin-bottom:0;
 }
 
