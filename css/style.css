@@ -3624,7 +3624,7 @@ Parallax
 }
 
 .parallax .overlay{
-    background-color: #222534;
+    background-color: rgba(34, 37, 52, 2) !important;
     position: absolute;
     top: 0;
     left: 0;
