@@ -6494,6 +6494,7 @@ Shopping cart
 Call to action
 =========================== */
 .cta-wrapp{
+	margin: 10px 0px;
 	display:block;
 	width:100%;
 	background:#eff4f7 url(../img/pattren02.png) repeat-x center top;
@@ -8952,13 +8953,13 @@ Tablet (portrait and landscape)
 	}
 	.top-wrapper .list-content,
 	.top-wrapper .top-social-network{
-		width:100%;
+		width:20%;
 	}
 	.top-wrapper .select-language,
 	.top-wrapper .select-language.floatright,
 	.top-wrapper .right-link{
-		float:left;
-		margin:10px 20px 0 0;
+		/* float: left; */ 
+        margin: -1px 3px 0 0;
 	}
 	.section-heading.storytella-heading.text-right{
 		margin-bottom:0;
@@ -9823,4 +9824,9 @@ a.openpanel:hover{
 
 #demo .title a{
 	color:#333;
+}
+
+.How_Para{
+	line-height: 1.3;
+    font-size: 23px;
 }

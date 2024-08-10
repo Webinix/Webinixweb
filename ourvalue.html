@@ -11,8 +11,9 @@
 	<meta name="keywords" content="">
 	<meta name="robots" content="index,follow">
     <link rel="icon" href="ico/favicon.png">
-
-    <title>WebInix Technologies</title>
+	<!-- Whatsapp API -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<title>WebInix Solution</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -44,95 +45,116 @@
 	</div>
 	<!-- End preloading -->
 
-	<!-- Start top section -->
-	<div class="top-wrapper">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6">
-					<ul class="top-social-network">
-						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-						<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-						<li><a href="mailto:Info@devcom.com"><i class="fa fa-envelope"></i> Info@devcom.com</a></li>
-					</ul>
-				</div>
-				
-				<div class="col-md-6">
-					<ul class="right-link sign-link">
-						<li><a href="faq.html">Career</a></li>
-						<li><a href="faq.html">FAQ</a></li>
-						<li><a href="contact.html">Contact us</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End top section -->
-	
-	<div class="clearfix"></div>
-	
-    <!-- Start Navigation -->
-    <nav class="navbar navbar-default navbar-sticky bootsnav">
+	<a id="whatsappLink" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
+		<i class="fab fa-whatsapp"></i>
+	</a>	
+	<script>
+		// Function to generate a random token
+		function generateToken(length) {
+			const characters = '0123456789';
+			let token = '';
+			for (let i = 0; i < length; i++) {
+				token += characters.charAt(Math.floor(Math.random() * characters.length));
+			}
+			return token;
+		}
+		// Assign the token to the WhatsApp link
+		function setWhatsAppLink() {
+			const phone = '918595145268';
+			const message = 'Hello, I\'ve just visited your website and would like to know more. Reference Token: ';
+			const token = generateToken(5);
+			const link = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message + token)}`;
+			
+			document.getElementById('whatsappLink').href = link;
+		}
+		// Set the link on page load
+		window.onload = setWhatsAppLink;
+	</script>
 
-        <!-- Start Top Search -->
-        <div class="top-search">
+		<!-- Start top section -->
+        <div class="top-wrapper">
             <div class="container">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                    <input type="text" class="form-control" placeholder="Type something ann hit enter">
-                    <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="top-social-network">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <ul class="right-link sign-link">
+                            <li><a href="career.html">Career</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="contact.html">Contact us</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
+        <!-- End top section -->
+        
+        <div class="clearfix"></div>
+        
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-default navbar-sticky bootsnav">
+    
+        <!-- Start Top Search -->
+        <div class="top-search">
+                <div class="container">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                        <input type="text" class="form-control" placeholder="Type something ann hit enter">
+                        <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+                    </div>
+                </div>
+        </div>
         <!-- End Top Search -->
-
-        <div class="container">            
-            <!-- Start Header Navigation -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand" href="/index.html"><img src="img/brand/logo-black.png" class="logo" alt=""></a>
-            </div>
-            <!-- End Header Navigation -->
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="navbar-menu">
-                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-                    <li ><a href="/index.html">Home</a></li>
-                    <li><a href="services-alt1.html">Services</a></li>
-					<li><a href="about-alt1.html">About Us</a></li>
-                    <li><a href="/maintenance.html">Blogs</a></li>
-
-					<li class="dropdown active">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Company</a>
-                        <ul class="dropdown-menu">
-							<li><a href="howwework.html">How We Work</a></li>
-							<li><a href="mission&vision.html">Mission & Vision</a></li>
-							<li><a href="ourvalue.html">Our Value</a></li>
-                        </ul>
-                    </li>
-
-					<li><a href="portfolio-alt1.html">Portfolio</a></li>
-					<li><a href="tel:+919565153545"><i class="fa fa-phone"></i> +91-9565153545</a></li>
-
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div>   
-    </nav>
-    <!-- End Navigation -->
+    
+            <div class="container">            
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="img/brand/logo-black.png" class="logo" alt=""></a>
+                </div>
+                <!-- End Header Navigation -->
+    
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li ><a href="/index.html">Home</a></li>
+                        <li ><a href="services-alt1.html">Services</a></li>
+                        <li><a href="about-alt1.html">About Us</a></li>
+                        <li><a href="/maintenance.html">Blogs</a></li>
+    
+                        <li  class="dropdown active">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Company</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="howwework.html">How We Work</a></li>
+                                <li><a href="mission&vision.html">Mission & Vision</a></li>
+                                <li><a href="ourvalue.html">Our Value</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="portfolio-alt1.html">Portfolio</a></li>
+                        <li><a href="tel:+919565153545"><i class="fa fa-phone"></i> +91-9565153545</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>   
+        </nav>
+        <!-- End Navigation -->
 	
 	<!-- Start inner page header -->
 	<div class="innerheader-wrapp">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<h2><i class="fa fa-user-circle-o"></i> Our <span>Value</span></h2>
+					<h2><i class="fa fa-laptop"></i> Our <span>Value</span></h2>
 					<ol class="breadcrumb">
 						<li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-						<li><a href="#"><i class="fa fa-clone"></i> Company</a></li>
-						<li class="active"><i class="fa fa-user-circle-o"></i> Our Value</li>
+						<li class="active"><i class="fa fa-laptop"></i>Our Value</li>
 					</ol>
 				</div>
 			</div>
@@ -141,321 +163,76 @@
 	<!-- End inner page header -->
 	
 	<div class="clearfix"></div>
+	<style>
+		.parallax-section {
+			/* The image used */
+			background-image: url('img/parallax/bg01.jpg'); /* Replace with the path to your image */
+			
+			/* Parallax effect */
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			margin: 0px 0px 16px 0px;
+			/* Full width and height settings */
+			height: 40vh; /* 30% of the viewport height */
+			
+			/* Additional styling */
+			color: #fff; /* Text color */
+			display: flex;
+		}
+		.parallax-section::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 40vh;
+			background: rgba(0, 0, 0, 0.7);
+		}
+	</style>
 	
 	<!-- Start contain wrapp -->
-	<div class="contain-wrapp padding-bot40">
-		<div class="container">
-			<div class="row marginbot60">
-				<div class="col-md-8 col-md-offset-2">
-					<div class="section-heading text-center">
-						<h5>About our developement agency</h5>
-						<p>Clean and <strong>Modern</strong> HTML5 <strong>template</strong> in one download package</p>
-					</div>
-					<img src="img/macbook-3device.png" class="img-responsive" alt="" />
+	<div class="contain-wrapp  padding-bot20" style="padding: 0 !important;">
+
+		<div class="parallax-section">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="section-heading text-center" style="padding: 9% 0px;">
+					<h5 style="color: white; z-index: 100;">Our Value</h5>
+					<p style="color: white !important; z-index: 100;" class="How_Para">Our values extend beyond digital marketing and software development. We are dedicated to driving innovation and achieving excellence in every aspect of our work.</p>
 				</div>
 			</div>
+		</div>	
+
+		<div class="container">		
 			<div class="row">
-				<div class="col-md-4">
-					<div class="centered-icon">
-						<div class="icon-wrapp icon-circle icon-primary"><i class="fa fa-line-chart"></i></div>
-						<h5>Modern business</h5>
-						<p>
-						Vituperatoribus duo oporteat eleifend ut. Qui detracto deserunt ea. Te mea semper commodo persius. Eam affert vivendo ea.
-						</p>
-						<p><a href="#" class="btn btn-default btn-sm">Learn more</a></p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="centered-icon">
-						<div class="icon-wrapp icon-circle icon-primary"><i class="fa fa-laptop"></i></div>
-						<h5>Full responsive</h5>
-						<p>
-						Vituperatoribus duo oporteat eleifend ut. Qui detracto deserunt ea. Te mea semper commodo persius. Eam affert vivendo ea.
-						</p>
-						<p><a href="#" class="btn btn-default btn-sm">Learn more</a></p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="centered-icon">
-						<div class="icon-wrapp icon-circle icon-primary"><i class="fa fa-rocket"></i></div>
-						<h5>Fast support</h5>
-						<p>
-						Vituperatoribus duo oporteat eleifend ut. Qui detracto deserunt ea. Te mea semper commodo persius. Eam affert vivendo ea.
-						</p>
-						<p><a href="#" class="btn btn-default btn-sm">Learn more</a></p>
-					</div>
+				<div class="col-md-12">
+					<h5>Our Value</h5>
+					<p>WebInix Solution, we are dedicated to upholding core principles that guide our work and client relationships in the realm of professional website design, software development, and digital marketing. As a trusted partner for businesses looking to enhance their online presence and achieve their goals, we focus on creating compelling websites, developing innovative software, and implementing effective digital marketing strategies that drive engagement and growth.</p>
+					<p>Our expertise spans a wide range of technologies, including Angular, React, Node.js, HTML, WordPress, WIX, Shopify, Android, iOS, and React Native. We serve diverse industries such as financial services, healthcare, automotive, education, travel and hospitality, and IT and technology.</p>
+					<h5>Core Values at WebInix Solution</h5>
+					<p> <strong>Quality: </strong> We are dedicated to delivering exceptional services and solutions, aiming for excellence in every project. Our objective is to surpass industry benchmarks and meet or exceed client expectations. </p>
+					<p> <strong>Innovation: </strong> In an ever-changing industry, we stay ahead by embracing the latest technologies and trends. This commitment to innovation allows us to deliver forward-thinking solutions. </p>
+					<p> <strong>Integrity and Professionalism: </strong>  We maintain the highest standards of integrity and professionalism. Our adherence to industry best practices ensures transparency and honesty in all our dealings. </p>
+					<p> <strong>Continuous Improvement: </strong> We are dedicated to ongoing improvement. By actively seeking feedback, analyzing our processes, and integrating lessons learned, we enhance our services to achieve better outcomes for our clients. </p>
+					<h5>Conclusion</h5>
+					<p>WebInix Solution is committed to upholding these core values as the foundation of our operations. Our focus on quality, client satisfaction, innovation, collaboration, integrity, and continuous improvement drives us to deliver exceptional results and build strong, lasting partnerships. We invite you to explore how these principles are embedded in our approach and to connect with us to see how we can support your goals. Visit our website or contact us directly to learn more about how we can help you achieve success.</p>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- End contain wrapp -->
 
-	<!-- End contain wrapp -->
-	<div class="half-column-wrapp primary-bg">
-		<div class="half-column">
-			<img src="img/designer-work.jpg" class="img-responsive" alt="" />
-		</div>
-		<div class="half-column column-content">
-			<div class="tagline-title">
-				<span>We believe</span>
-				<h3>Stylish website that will improve your business</h3>
-			</div>
-			<p>
-			Sea at autem minim, id postea tritani vim. Vim eius summo at. Cu everti feugiat percipit qui, has atqui vitae postea ut, mei appellantur neglegentur no. Cu nulla consetetur per, ei sed habemus recteque.Ei vis viris tantas suscipit, at quo meis dicat facilisi. Qui homero soluta patrioque te, duis veri persequeris cu duo.
-			</p>
-			<h5>Our skill</h5>
-            <!-- Start Progress Bar -->
-            <div class="wrap-progress">
-                <!-- Start Progress Bar 01 -->
-                <div class="progress type3 progress-lemon">
-                    <div class="progress-bar" role="progressbar" data-value-progress="85">
-                        <span class="value-progress">00</span>
-                        <span class="data-progress">HTML & CSS</span>
-                    </div>
-                </div>
-                <!-- End Progress Bar 01 -->
-				
-                <!-- Start Progress Bar 01 -->
-                <div class="progress type3 progress-amaranth">
-                    <div class="progress-bar" role="progressbar" data-value-progress="70">
-                        <span class="value-progress">00</span>
-                        <span class="data-progress">Wordpress</span>
-                    </div>
-                </div>
-                <!-- End Progress Bar 01 -->
-				
-                <!-- Start Progress Bar 01 -->
-                <div class="progress type3 progress-cinnabar">
-                    <div class="progress-bar" role="progressbar" data-value-progress="55">
-                        <span class="value-progress">00</span>
-                        <span class="data-progress">Joomla</span>
-                    </div>
-                </div>
-                <!-- End Progress Bar 01 -->
-				
-				
-                <!-- Start Progress Bar 01 -->
-                <div class="progress type3 progress-gold">
-                    <div class="progress-bar" role="progressbar" data-value-progress="75">
-                        <span class="value-progress">00</span>
-                        <span class="data-progress">Drupal</span>
-                    </div>
-                </div>
-                <!-- End Progress Bar 01 -->
-            </div>
-            <!-- End Progress Bar -->
-		</div>
-	</div>
-	<!-- End contain wrapp -->
-	
-	<div class="clearfix"></div>
-	
 	<!-- Start contain wrapp -->
-	<div class="contain-wrapp padding-bot30">
+	<div class="cta-wrapp primary-bg">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8 col-md-offset-2">
-					<div class="section-heading text-center">
-						<h5>Meet team</h5>
-						<p><strong>We are</strong> supported by a <strong>professional</strong> team</p>
-					</div>
+				<div class="col-md-8">
+					<h4>Need help or have something to ask? Please contact us!</h4>
+					<p>If you have any questions or need assistance, don't hesitate to reach out to us. We're here to help and provide you with the support you need.</p>					
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 owl-column-wrapp">
-					<div class="recent-4column owl-carousel owl-theme">
-					<!-- Start team -->
-					<div class="item">
-						<div class="team-wrapper">
-							<div class="img-wrapper">
-								<div class="team-caption">
-									<div class="team-socmed">
-										<div>
-											<a href="#"><i class="fa fa-facebook icon-rectangle icon-primary"></i></a>
-											<a href="#"><i class="fa fa-twitter icon-rectangle icon-primary"></i></a>
-											<a href="#"><i class="fa fa-instagram icon-rectangle icon-primary"></i></a>
-										</div>
-									</div>
-								</div>
-								<img src="img/team/team01.png" class="img-responsive" alt="" />
-							</div>
-							<div class="team-content">
-								<h5>Asep jebot</h5>
-								<span class="team-position">Founder</span>
-								<button class="show-caption open-caption"><i class="fa fa-plus"></i></button>
-							</div>
-						</div>
-					</div>
-					<!-- End team -->
-
-						<!-- Start team -->
-						<div class="item">
-							<div class="team-wrapper">
-								<div class="img-wrapper">
-									<div class="team-caption">
-										<div class="team-socmed">
-											<div>
-												<a href="#"><i class="fa fa-facebook icon-rectangle icon-primary"></i></a>
-												<a href="#"><i class="fa fa-twitter icon-rectangle icon-primary"></i></a>
-												<a href="#"><i class="fa fa-instagram icon-rectangle icon-primary"></i></a>
-											</div>
-										</div>
-									</div>
-									<img src="img/team/team02.png" class="img-responsive" alt="" />
-								</div>
-								<div class="team-content">
-									<h5>Neng geboy</h5>
-									<span class="team-position">Co-Founder</span>
-									<button class="show-caption open-caption"><i class="fa fa-plus"></i></button>
-								</div>
-							</div>
-						</div>
-						<!-- End team -->
-
-						<!-- Start team -->
-						<div class="item">
-							<div class="team-wrapper">
-								<div class="img-wrapper">
-									<div class="team-caption">
-										<div class="team-socmed">
-											<div>
-												<a href="#"><i class="fa fa-facebook icon-rectangle icon-primary"></i></a>
-												<a href="#"><i class="fa fa-twitter icon-rectangle icon-primary"></i></a>
-												<a href="#"><i class="fa fa-instagram icon-rectangle icon-primary"></i></a>
-											</div>
-										</div>
-									</div>
-									<img src="img/team/team03.png" class="img-responsive" alt="" />
-								</div>
-								<div class="team-content">
-									<h5>Ujang bako</h5>
-									<span class="team-position">CFO</span>
-									<button class="show-caption open-caption"><i class="fa fa-plus"></i></button>
-								</div>
-							</div>
-						</div>
-						<!-- End team -->
-
-						<!-- Start team -->
-						<div class="item">
-							<div class="team-wrapper">
-								<div class="img-wrapper">
-									<div class="team-caption">
-										<div class="team-socmed">
-											<div>
-												<a href="#"><i class="fa fa-facebook icon-rectangle icon-primary"></i></a>
-												<a href="#"><i class="fa fa-twitter icon-rectangle icon-primary"></i></a>
-												<a href="#"><i class="fa fa-instagram icon-rectangle icon-primary"></i></a>
-											</div>
-										</div>
-									</div>
-									<img src="img/team/team04.png" class="img-responsive" alt="" />
-								</div>
-								<div class="team-content">
-									<h5>Acep kehed</h5>
-									<span class="team-position">Manager</span>
-									<button class="show-caption open-caption"><i class="fa fa-plus"></i></button>
-								</div>
-							</div>
-						</div>
-						<!-- End team -->
-
-						<!-- Start team -->
-						<div class="item">
-							<div class="team-wrapper">
-								<div class="img-wrapper">
-									<div class="team-caption">
-										<div class="team-socmed">
-											<div>
-												<a href="#"><i class="fa fa-facebook icon-rectangle icon-primary"></i></a>
-												<a href="#"><i class="fa fa-twitter icon-rectangle icon-primary"></i></a>
-												<a href="#"><i class="fa fa-instagram icon-rectangle icon-primary"></i></a>
-											</div>
-										</div>
-									</div>
-									<img src="img/team/team05.png" class="img-responsive" alt="" />
-								</div>
-								<div class="team-content">
-									<h5>Ai bahenol</h5>
-									<span class="team-position">Marketing</span>
-									<button class="show-caption open-caption"><i class="fa fa-plus"></i></button>
-								</div>
-							</div>
-						</div>
-						<!-- End team -->
-
-						<!-- Start team -->
-						<div class="item">
-							<div class="team-wrapper">
-								<div class="img-wrapper">
-									<div class="team-caption">
-										<div class="team-socmed">
-											<div>
-												<a href="#"><i class="fa fa-facebook icon-rectangle icon-primary"></i></a>
-												<a href="#"><i class="fa fa-twitter icon-rectangle icon-primary"></i></a>
-												<a href="#"><i class="fa fa-instagram icon-rectangle icon-primary"></i></a>
-											</div>
-										</div>
-									</div>
-									<img src="img/team/team06.png" class="img-responsive" alt="" />
-								</div>
-								<div class="team-content">
-									<h5>Entis pitak</h5>
-									<span class="team-position">Designer</span>
-									<button class="show-caption open-caption"><i class="fa fa-plus"></i></button>
-								</div>
-							</div>
-						</div>
-						<!-- End team -->
-
-						<!-- Start team -->
-						<div class="item">
-							<div class="team-wrapper">
-								<div class="img-wrapper">
-									<div class="team-caption">
-										<div class="team-socmed">
-											<div>
-												<a href="#"><i class="fa fa-facebook icon-rectangle icon-primary"></i></a>
-												<a href="#"><i class="fa fa-twitter icon-rectangle icon-primary"></i></a>
-												<a href="#"><i class="fa fa-instagram icon-rectangle icon-primary"></i></a>
-											</div>
-										</div>
-									</div>
-									<img src="img/team/team07.png" class="img-responsive" alt="" />
-								</div>
-								<div class="team-content">
-									<h5>Udin cilok</h5>
-									<span class="team-position">Designer</span>
-									<button class="show-caption open-caption"><i class="fa fa-plus"></i></button>
-								</div>
-							</div>
-						</div>
-						<!-- End team -->
-
-						<!-- Start team -->
-						<div class="item">
-							<div class="team-wrapper">
-								<div class="img-wrapper">
-									<div class="team-caption">
-										<div class="team-socmed">
-											<div>
-												<a href="#"><i class="fa fa-facebook icon-rectangle icon-primary"></i></a>
-												<a href="#"><i class="fa fa-twitter icon-rectangle icon-primary"></i></a>
-												<a href="#"><i class="fa fa-instagram icon-rectangle icon-primary"></i></a>
-											</div>
-										</div>
-									</div>
-									<img src="img/team/team08.png" class="img-responsive" alt="" />
-								</div>
-								<div class="team-content">
-									<h5>Edah jenong</h5>
-									<span class="team-position">Designer</span>
-									<button class="show-caption open-caption"><i class="fa fa-plus"></i></button>
-								</div>
-							</div>
-						</div>
-						<!-- End team -->
-					</div>
+				<div class="col-md-4">
+					<a class="btn btn-mandy btn-lg btn-3d btn-icon icon-divider" href="/contact.html"><i class="fa fa-envelope"></i>Get in touch with us</a>
 				</div>
 			</div>
 		</div>
@@ -562,9 +339,9 @@
 <!-- End footer -->
  
 	<!-- Start to top -->  
-    <a href="#" class="toTop">
+    <!-- <a href="#" class="toTop">
         <i class="fa fa-chevron-up"></i>
-    </a>  
+    </a>   -->
     <!-- End to top -->
 	
 	<!-- START JAVASCRIPT -->
@@ -620,6 +397,10 @@
 	<script src="js/owlcarousel/owl.carousel.min.js"></script>  
 	<script src="js/owlcarousel/setting.js"></script>
 	
+    <!-- Flip -->
+	<script src="js/flip/flip.js"></script>
+	<script src="js/flip/setting.js"></script>
+	
     <!-- Parallax -->
 	<script src="js/parallax/jquery.parallax-1.1.3.js"></script>
 	<script src="js/parallax/setting.js"></script>
@@ -633,10 +414,6 @@
     <script src="js/custom.js"></script>
 
 		
-  <!-- Whatsapp API -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <a href="https://api.whatsapp.com/send?phone=918595145268&text=I%20have%20just%20come%20from%20the%20website" class="whatsapp-button">
-	  <i class="fab fa-whatsapp"></i>
-  </a>
+  
 </body>
 </html>

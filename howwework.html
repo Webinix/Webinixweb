@@ -11,8 +11,9 @@
 	<meta name="keywords" content="">
 	<meta name="robots" content="index,follow">
     <link rel="icon" href="ico/favicon.png">
-
-	<title>WebInix Technologies</title>
+	<!-- Whatsapp API -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<title>WebInix Solution</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -44,6 +45,32 @@
 	</div>
 	<!-- End preloading -->
 
+	<a id="whatsappLink" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
+		<i class="fab fa-whatsapp"></i>
+	</a>	
+	<script>
+		// Function to generate a random token
+		function generateToken(length) {
+			const characters = '0123456789';
+			let token = '';
+			for (let i = 0; i < length; i++) {
+				token += characters.charAt(Math.floor(Math.random() * characters.length));
+			}
+			return token;
+		}
+		// Assign the token to the WhatsApp link
+		function setWhatsAppLink() {
+			const phone = '918595145268';
+			const message = 'Hello, I\'ve just visited your website and would like to know more. Reference Token: ';
+			const token = generateToken(5);
+			const link = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message + token)}`;
+			
+			document.getElementById('whatsappLink').href = link;
+		}
+		// Set the link on page load
+		window.onload = setWhatsAppLink;
+	</script>
+
 		<!-- Start top section -->
         <div class="top-wrapper">
             <div class="container">
@@ -51,16 +78,14 @@
                     <div class="col-md-6">
                         <ul class="top-social-network">
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                             <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                             <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="mailto:Info@devcom.com"><i class="fa fa-envelope"></i> Info@devcom.com</a></li>
                         </ul>
                     </div>
                     
                     <div class="col-md-6">
                         <ul class="right-link sign-link">
-                            <li><a href="faq.html">Career</a></li>
+                            <li><a href="career.html">Career</a></li>
                             <li><a href="faq.html">FAQ</a></li>
                             <li><a href="contact.html">Contact us</a></li>
                         </ul>
@@ -75,8 +100,8 @@
         <!-- Start Navigation -->
         <nav class="navbar navbar-default navbar-sticky bootsnav">
     
-            <!-- Start Top Search -->
-            <div class="top-search">
+        <!-- Start Top Search -->
+        <div class="top-search">
                 <div class="container">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-search"></i></span>
@@ -84,8 +109,8 @@
                         <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
                     </div>
                 </div>
-            </div>
-            <!-- End Top Search -->
+        </div>
+        <!-- End Top Search -->
     
             <div class="container">            
                 <!-- Start Header Navigation -->
@@ -93,7 +118,7 @@
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                         <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand" href="/index.html"><img src="img/brand/logo-black.png" class="logo" alt=""></a>
+                    <a class="navbar-brand" href="/"><img src="img/brand/logo-black.png" class="logo" alt=""></a>
                 </div>
                 <!-- End Header Navigation -->
     
@@ -113,10 +138,8 @@
                                 <li><a href="ourvalue.html">Our Value</a></li>
                             </ul>
                         </li>
-    
                         <li><a href="portfolio-alt1.html">Portfolio</a></li>
                         <li><a href="tel:+919565153545"><i class="fa fa-phone"></i> +91-9565153545</a></li>
-    
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div>   
@@ -131,7 +154,6 @@
 					<h2><i class="fa fa-laptop"></i> How <span>We Work</span></h2>
 					<ol class="breadcrumb">
 						<li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-						<li><a href="#"><i class="fa fa-clone"></i> Company</a></li>
 						<li class="active"><i class="fa fa-laptop"></i> How We Work</li>
 					</ol>
 				</div>
@@ -141,183 +163,79 @@
 	<!-- End inner page header -->
 	
 	<div class="clearfix"></div>
+	<style>
+		.parallax-section {
+			/* The image used */
+			background-image: url('img/parallax/bg01.jpg'); /* Replace with the path to your image */
+			
+			/* Parallax effect */
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			margin: 0px 0px 16px 0px;
+			/* Full width and height settings */
+			height: 40vh; /* 30% of the viewport height */
+			
+			/* Additional styling */
+			color: #fff; /* Text color */
+			display: flex;
+		}
+		.parallax-section::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 40vh;
+			background: rgba(0, 0, 0, 0.7);
+		}
+	</style>
 	
 	<!-- Start contain wrapp -->
-	<div class="contain-wrapp padding-bot20">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2">
-					<div class="section-heading text-center">
-						<h5>Our services</h5>
-						<p>Our <strong>commitment</strong> is to provide the best service to <strong>every customer</strong></p>
-					</div>
+	<div class="contain-wrapp  padding-bot20" style="padding: 0 !important;">
+
+		<div class="parallax-section">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="section-heading text-center" style="padding: 9% 0px;">
+					<h5 style="color: white; z-index: 100;">How We Work</h5>
+					<p style="color: white !important; z-index: 100;" class="How_Para">WebInix is a technological <strong>business</strong> with expertise in digital marketing, software development, and website design.</p>
 				</div>
 			</div>
+		</div>	
+
+		<div class="container">		
 			<div class="row">
-				<div class="col-md-4">
-					<div class="icon-box-circle">
-						<div class="icon-box-content">
-							<div class="bottom-icon"><i class="fa fa-laptop icon-circle fa-3x icon-jaffa"></i></div>
-							<h5>Web <span>design</span></h5>
-							<p>
-							Eam affert vivendo ea, quo et vero vituperatoribus, duo oporteat eleifend ut.
-							</p>
-							<p><a href="#" class="btn btn-jaffa btn-sm">Get it</a></p>
-						</div>
-					</div>
+				<div class="col-md-12">
+					<h5>How We Work?</h5>
+					<p>WebInix is a technological business specializing in digital marketing, software development, and website design. With a comprehensive range of services and a team of skilled professionals, we aim to equip customers with the tools and resources they need to succeed in today’s fast-paced digital landscape. Our primary focus is to deliver top-tier services and solutions that align with our work philosophy, centered on our clients' success.</p>
+					<p> <strong>Understanding Client Needs:</strong>  At WebInix, we start by thoroughly analyzing the client’s goals, objectives, and project requirements. We engage in detailed discussions and consultations to fully understand the client's vision. </p>
+					<p> <strong>Strategic Planning:</strong> Once the requirements are clear, WebInix formulates a comprehensive plan and strategy. This includes setting project milestones, resources, timelines, and deliverables. We collaborate closely to ensure alignment with the client’s business goals. </p>
+					<p> <strong>Design and Development:</strong> Our designers and developers at WebInix focus on creating visually appealing and user-friendly designs. Leveraging our expertise in web development, software development, and UI/UX design, we craft tailored solutions that meet our client’s specific needs. We utilize technologies like HTML, CSS, JavaScript, and various frameworks to build responsive and functional websites and applications. </p>
+					<p> <strong>Quality Assurance:</strong> WebInix places a strong emphasis on quality assurance and testing. We conduct extensive testing processes to identify and resolve any issues or defects in the website or software, ensuring the final product meets the highest standards of performance, security, and functionality. </p>
+					<p> <strong>Deployment and Launch:</strong> After development and testing, WebInix assists with the deployment of the final product. We ensure a smooth transition from development to production, including server setup, database configuration, and necessary integrations. </p>
+					<p> <strong>Ongoing Support and Maintenance:</strong> WebInix offers continuous support and maintenance services to our clients. We handle bug fixes, upgrades, updates, and any technical issues that may arise, ensuring the client’s software or website remains operational and up-to-date. </p>
+					<p> <strong>Understanding Client Needs:</strong> At WebInix, we start by thoroughly analyzing the client’s goals, objectives, and project requirements. We engage in detailed discussions and consultations to fully understand the client's vision. </p>
+
+					<p>WebInix collaborates closely with clients, providing regular updates on project progress and involving them in key decision-making processes. Our goal is not only to meet but to exceed client expectations in terms of quality, functionality, and user experience.</p>
+					<p>Whether clients need website design and development, software development, or digital marketing, WebInix brings the expertise and resources necessary to thrive in today’s fast-paced digital landscape. With a broad range of services and a team of skilled professionals, we are dedicated to equipping our clients with the tools and support they need to succeed.</p>
 				</div>
-				<div class="col-md-4">
-					<div class="icon-box-circle">
-						<div class="icon-box-content">
-							<div class="bottom-icon"><i class="fa fa-wordpress icon-circle fa-3x icon-meadow"></i></div>
-							<h5>Word<span>Press</span></h5>
-							<p>
-							Eam affert vivendo ea, quo et vero vituperatoribus, duo oporteat eleifend ut.
-							</p>
-							<p><a href="#" class="btn btn-meadow btn-sm">Get it</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="icon-box-circle">
-						<div class="icon-box-content">
-							<div class="bottom-icon"><i class="fa fa-font icon-circle fa-3x icon-picton"></i></div>
-							<h5>Fonts <span>design</span></h5>
-							<p>
-							Eam affert vivendo ea, quo et vero vituperatoribus, duo oporteat eleifend ut.
-							</p>
-							<p><a href="#" class="btn btn-picton btn-sm">Get it</a></p>
-						</div>
-					</div>
-				</div>
+				
 			</div>
 		</div>
 	</div>
 	<!-- End contain wrapp -->
 
 	<!-- Start contain wrapp -->
-	<div class="contain-wrapp inverse-container padding-bot30">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2">
-					<div class="section-heading text-center">
-						<h5>How it work</h5>
-						<p><strong>Completed</strong> every project <strong>with 3 easy</strong> steps</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<ul class="process-3colum">
-						<li>
-							<i class="fa fa-pencil icon-circle icon-mandy fa-6x"></i>
-							<h5>Sketch</h5>
-							<p>
-							Mea ad purto aperiam maluisset. At vidit officiis sed, eleifend convenire usu ut, nominati pertinacia in usu. No ius tollit commodo. 
-							</p>
-						</li>
-						<li>
-							<i class="fa fa-laptop icon-circle icon-primary fa-6x"></i>
-							<h5>Create</h5>
-							<p>
-							Mea ad purto aperiam maluisset. At vidit officiis sed, eleifend convenire usu ut, nominati pertinacia in usu. No ius tollit commodo. 
-							</p>
-						</li>
-						<li>
-							<i class="fa fa-shopping-cart icon-circle icon-picton fa-6x"></i>
-							<h5>Sell</h5>
-							<p>
-							Mea ad purto aperiam maluisset. At vidit officiis sed, eleifend convenire usu ut, nominati pertinacia in usu. No ius tollit commodo. 
-							</p>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End contain wrapp -->
-	
-	<!-- Start contain wrapp -->
-	<div class="contain-wrapp padding-bot50">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2">
-					<div class="section-heading text-center">
-						<h5>Testimoni</h5>
-						<p>Our <strong>satisfied</strong> customers</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2">
-					<div class="single-dotted-nav owl-carousel owl-theme">
-						<!-- Start item 1 -->
-						<div class="item">
-							<div class="single-testimoni">
-								<blockquote class="centered">
-								<p>
-								Cu nec salutandi <strong>voluptatibus</strong>. Ceteros <strong>definitionem ad ius</strong>, ut eam unum volutpat, omnium gloriatur te mei.
-								</p>
-								</blockquote>
-								<div class="testimoni-author">
-									<a href="#" class="avatar"><img src="img/testimoni/avatar01.jpg" class="avatar" alt="" /></a>
-									<h6>Neng <span>geboy</span></h6>
-									<p>CFO - <a href="#">99webpage.com</a></p>
-								</div>
-							</div>
-						</div>
-						<!-- End item 1 -->
-							
-						<!-- Start item 2 -->
-						<div class="item">
-							<div class="single-testimoni">
-								<blockquote class="centered">
-								<p>
-								Tollit recusabo <strong>comprehensam</strong> vim ex, ceteros <strong>eligendi sententiae</strong> sed in. Te duo illum. Ne nec phaedrum nec.
-								</p>
-								</blockquote>
-								<div class="testimoni-author">
-									<a href="#" class="avatar"><img src="img/testimoni/avatar02.jpg" class="avatar" alt="" /></a>
-									<h6>Asep <span>jebot</span></h6>
-									<p>CFO - <a href="#">99webpage.com</a></p>
-								</div>
-							</div>
-						</div>
-						<!-- End item 2 -->
-							
-						<!-- Start item 3 -->
-						<div class="item">
-							<div class="single-testimoni">
-								<blockquote class="centered">
-								<p>
-								No pro civibus <strong>oportere</strong>, laoreet vivendo lobortis ei has, ei usu <strong>deleniti instructior</strong>. No nemore utamur mea.
-								</p>
-								</blockquote>
-								<div class="testimoni-author">
-									<a href="#" class="avatar"><img src="img/testimoni/avatar03.jpg" class="avatar" alt="" /></a>
-									<h6>Ujang <span>helmn</span></h6>
-									<p>CEO - <a href="#">99webpage.com</a></p>
-								</div>
-							</div>
-						</div>
-						<!-- End item 3 -->
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End contain wrapp -->
-	
-	<!-- Start contain wrapp -->
 	<div class="cta-wrapp primary-bg">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8">
-					<h4>Need help or have something to ask, please contact us</h4>
-					<p>An iusto disputando delicatissimi sed, duo dolor suavitate voluptaria ex.</p>
+					<h4>Need help or have something to ask? Please contact us!</h4>
+					<p>If you have any questions or need assistance, don't hesitate to reach out to us. We're here to help and provide you with the support you need.</p>					
 				</div>
 				<div class="col-md-4">
-					<a class="btn btn-mandy btn-lg btn-3d btn-icon icon-divider" href="#"><i class="fa fa-envelope"></i>Get in touch with us</a>
+					<a class="btn btn-mandy btn-lg btn-3d btn-icon icon-divider" href="/contact.html"><i class="fa fa-envelope"></i>Get in touch with us</a>
 				</div>
 			</div>
 		</div>
@@ -424,9 +342,9 @@
 <!-- End footer -->
  
 	<!-- Start to top -->  
-    <a href="#" class="toTop">
+    <!-- <a href="#" class="toTop">
         <i class="fa fa-chevron-up"></i>
-    </a>  
+    </a>   -->
     <!-- End to top -->
 	
 	<!-- START JAVASCRIPT -->
@@ -499,10 +417,6 @@
     <script src="js/custom.js"></script>
 
 		
-  <!-- Whatsapp API -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <a href="https://api.whatsapp.com/send?phone=918595145268&text=I%20have%20just%20come%20from%20the%20website" class="whatsapp-button">
-	  <i class="fab fa-whatsapp"></i>
-  </a>
+  
 </body>
 </html>
