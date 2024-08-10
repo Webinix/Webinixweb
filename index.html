@@ -44,10 +44,33 @@
 		</div>
 	</div>
 	<!-- End preloading -->
-
-	<a href="https://api.whatsapp.com/send?phone=918595145268&text=Hello%2C%20I%27ve%20just%20visited%20your%20website%20and%20would%20like%20to%20know%20more.%20Reference%20Token%3A%20YOUR_UNIQUE_TOKEN_ID" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
+	 
+	<a id="whatsappLink" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
 		<i class="fab fa-whatsapp"></i>
-	</a>
+	</a>	
+	<script>
+		// Function to generate a random token
+		function generateToken(length) {
+			const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+			let token = '';
+			for (let i = 0; i < length; i++) {
+				token += characters.charAt(Math.floor(Math.random() * characters.length));
+			}
+			return token;
+		}
+		// Assign the token to the WhatsApp link
+		function setWhatsAppLink() {
+			const phone = '918595145268';
+			const message = 'Hello, I\'ve just visited your website and would like to know more. Reference Token: ';
+			const token = generateToken(5);
+			const link = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message + token)}`;
+			
+			document.getElementById('whatsappLink').href = link;
+		}
+		// Set the link on page load
+		window.onload = setWhatsAppLink;
+	</script>
+	
 	
 	
 
@@ -687,8 +710,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<!-- <h3>+80 Premium HTML template in one package only $18</h3>
-					<p>Make it easy a <strong class="primary">beautiful website</strong> with bacotna templates</p> -->
+					<h3>Tell us about your idea,and We'll make it happens.</h3>
+					<p>Have a brand problom that need to be <strong class="primary">Solved?</strong> We'd to love to hear about it!</p>
 				</div>
 			</div>
 		</div>
