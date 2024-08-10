@@ -44,14 +44,14 @@
 		</div>
 	</div>
 	<!-- End preloading -->
-	 
+
 	<a id="whatsappLink" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
 		<i class="fab fa-whatsapp"></i>
 	</a>	
 	<script>
 		// Function to generate a random token
 		function generateToken(length) {
-			const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+			const characters = '0123456789';
 			let token = '';
 			for (let i = 0; i < length; i++) {
 				token += characters.charAt(Math.floor(Math.random() * characters.length));
