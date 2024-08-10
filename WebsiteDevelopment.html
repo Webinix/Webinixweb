@@ -1,0 +1,435 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="robots" content="index,follow">
+    <link rel="icon" href="ico/favicon.png">
+	<!-- Whatsapp API -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<title>WebInix Solution</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	
+	<!-- RS5.0 Main Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="css/revolution/settings.css">
+	
+	<!-- RS5.0 Layers and Navigation Styles -->
+	<link rel="stylesheet" type="text/css" href="css/revolution/layers.css">
+	<link rel="stylesheet" type="text/css" href="css/revolution/navigation.css"> 
+	
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- Color -->
+    <link id="skin" href="skins/default.css" rel="stylesheet">
+
+</head>
+<body>
+	<!-- Start preloading -->
+	<div id="loading" class="loading-invisible">
+		<div class="loading-center">
+			<div class="loading-center-absolute">
+				<div class="object" id="object_one"></div>
+				<div class="object" id="object_two"></div>
+				<div class="object" id="object_three"></div>
+			</div>
+			<p>Please wait...</p>
+		</div>
+	</div>
+	<!-- End preloading -->
+
+	<a id="whatsappLink" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
+		<i class="fab fa-whatsapp"></i>
+	</a>	
+	<script>
+		// Function to generate a random token
+		function generateToken(length) {
+			const characters = '0123456789';
+			let token = '';
+			for (let i = 0; i < length; i++) {
+				token += characters.charAt(Math.floor(Math.random() * characters.length));
+			}
+			return token;
+		}
+		// Assign the token to the WhatsApp link
+		function setWhatsAppLink() {
+			const phone = '918595145268';
+			const message = 'Hello, I\'ve just visited your website and would like to know more. Reference Token: ';
+			const token = generateToken(5);
+			const link = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message + token)}`;
+			
+			document.getElementById('whatsappLink').href = link;
+		}
+		// Set the link on page load
+		window.onload = setWhatsAppLink;
+	</script>
+
+		<!-- Start top section -->
+        <div class="top-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="top-social-network">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <ul class="right-link sign-link">
+                            <li><a href="career.html">Career</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="contact.html">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End top section -->
+        
+        <div class="clearfix"></div>
+        
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-default navbar-sticky bootsnav">
+    
+        <!-- Start Top Search -->
+        <div class="top-search">
+                <div class="container">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                        <input type="text" class="form-control" placeholder="Type something ann hit enter">
+                        <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+                    </div>
+                </div>
+        </div>
+        <!-- End Top Search -->
+    
+            <div class="container">            
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="img/brand/logo-black.png" class="logo" alt=""></a>
+                </div>
+                <!-- End Header Navigation -->
+    
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li ><a href="/">Home</a></li>
+                        <li ><a href="services-alt1.html">Services</a></li>
+                        <li><a href="about-alt1.html">About Us</a></li>
+                        <li><a href="/maintenance.html">Blogs</a></li>
+    
+                        <li  class="dropdown active">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Company</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="howwework.html">How We Work</a></li>
+                                <li><a href="mission&vision.html">Mission & Vision</a></li>
+                                <li><a href="ourvalue.html">Our Value</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="portfolio-alt1.html">Portfolio</a></li>
+                        <li><a href="tel:+919565153545"><i class="fa fa-phone"></i> +91-9565153545</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>   
+        </nav>
+        <!-- End Navigation -->
+	
+	<!-- Start inner page header -->
+	<div class="innerheader-wrapp">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2><i class="fa fa-laptop"></i> Software <span>Development</span></h2>
+					<ol class="breadcrumb">
+						<li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+						<li><a href="/services-alt1.html"><i class="fa fa-home"></i> Service</a></li>
+						<li ><i class="fa fa-laptop"></i> Software Development</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End inner page header -->
+	
+	<div class="clearfix"></div>
+	<style>
+		.parallax-section {
+			/* The image used */
+			background-image: url('img/parallax/bg01.jpg'); /* Replace with the path to your image */
+			
+			/* Parallax effect */
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			margin: 0px 0px 16px 0px;
+			/* Full width and height settings */
+			height: 40vh; /* 30% of the viewport height */
+			
+			/* Additional styling */
+			color: #fff; /* Text color */
+			display: flex;
+		}
+		.parallax-section::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 40vh;
+			background: rgba(0, 0, 0, 0.7);
+		}
+	</style>
+	
+	<!-- Start contain wrapp -->
+	<div class="contain-wrapp padding-bot20" style="padding: 0 !important;">
+		<div class="parallax-section">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="section-heading text-center" style="padding: 9% 0px;">
+					<h5 style="color: white;">Software Development</h5>
+					<p style="color: white !important; z-index: 100;" class="How_Para">We specialize in crafting innovative, high-performance software solutions tailored to your needs. Our focus is on delivering reliable, scalable, and secure applications that drive your business forward.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h5>1. Custom Software Development</h5>
+					<p><strong>Customized Solutions for Unique Needs:</strong> At WebInix Solution, we specialize in creating tailored software solutions that meet the unique needs of each client. Our custom software development services are designed to address specific business challenges and drive innovation, ensuring that our clients stay ahead in a competitive market.</p>
+					<p><strong>Innovation Through Technology:</strong> We are committed to leveraging the latest technologies and development practices to build software that is both cutting-edge and reliable. Our approach integrates the most advanced tools and methodologies to deliver solutions that enhance efficiency and effectiveness.</p>
+					<p><strong>Focused on Client Objectives:</strong> Our primary goal is to align our development efforts with our clients' strategic objectives. We work closely with our clients to understand their goals and deliver software that not only meets their needs but also supports their long-term success.</p>
+					<p><strong>Why Choose WebInix Solutions:</strong> With our expertise in custom software development, WebInix Solution offers a blend of innovation, technology, and client-centric focus. We ensure that each project is executed with precision and delivers tangible results, making us a trusted partner for businesses seeking to achieve their objectives through bespoke software solutions.</p>
+
+					<h5>2. Mobile App Development</h5>
+					<p><strong>Enhancing User Engagement:</strong> WebInix Solution focuses on developing mobile applications that engage users and provide exceptional experiences. Our mobile app development services are tailored to create apps that are user-friendly, efficient, and aligned with the latest trends in mobile technology.</p>
+					<p><strong>Comprehensive Development Process:</strong> We manage the entire app development lifecycle, from concept and design to deployment and support. Our process ensures that every aspect of the app is meticulously crafted to meet high standards of performance and usability.</p>
+					<p><strong>Adaptation to Market Trends:</strong> We stay abreast of the latest trends and advancements in mobile technology to offer solutions that are relevant and effective. Our team is skilled at incorporating new features and technologies to keep our clients' apps ahead of the curve.</p>
+					<p><strong>Why Choose WebInix Solutions:</strong> Choosing WebInix Solution for mobile app development means partnering with experts who prioritize user experience and technological excellence. Our commitment to delivering high-quality, innovative mobile solutions ensures that your app stands out in a competitive market and meets your business goals.</p>
+
+					<h5>3. Software QA & Testing</h5>
+					<p><strong>Ensuring Quality and Reliability:</strong> WebInix Solution provides comprehensive QA and testing services to ensure that software products are reliable and meet the highest quality standards. Our rigorous testing processes identify and address potential issues before they impact users, ensuring smooth and error-free performance.</p>
+					<p><strong>Thorough Testing Methodologies:</strong> We employ a range of testing methodologies, including functional, performance, and security testing, to evaluate every aspect of the software. Our approach ensures that all components work seamlessly and meet the specified requirements.</p>
+					<p><strong>Commitment to Continuous Improvement:</strong> Our QA and testing services are designed to support ongoing software improvement. We provide actionable insights and recommendations to enhance the product's functionality and user experience, contributing to its long-term success.</p>
+					<p><strong>Why Choose WebInix Solutions:</strong> WebInix Solution’s dedication to quality assurance and testing ensures that your software is reliable, efficient, and ready for market. Our comprehensive testing services provide peace of mind, knowing that your product will perform optimally and meet the highest standards of quality.</p>
+
+					<h5>4. CRM Development</h5>
+					<p><strong>Optimizing Customer Relationships:</strong> Our CRM development services are designed to help businesses manage and optimize their customer relationships effectively. We build customized CRM systems that streamline customer interactions, enhance data management, and support strategic decision-making.</p>
+					<p><strong>Tailored Solutions for Business Needs:</strong> We understand that each business has unique requirements when it comes to CRM. Our solutions are tailored to fit the specific needs of our clients, ensuring that the CRM system aligns with their business processes and goals.</p>
+					<p><strong>Scalability and Flexibility:</strong> Our CRM solutions are built to scale with your business. We design systems that are flexible and adaptable to evolving business needs, ensuring that your CRM can grow and change as your business does.</p>
+					<p><strong>Why Choose WebInix Solutions:</strong> By choosing WebInix Solution for CRM development, you gain access to expert solutions that enhance customer relationship management and drive business growth. Our tailored CRM systems provide the tools you need to effectively manage customer interactions and achieve your strategic objectives.</p>
+
+					<h5>Conclusion</h5>
+					<p><strong>Why Choose WebInix Solutions:</strong> At WebInix Solution, our mission is to transform the digital landscape through cutting-edge web design, software development, and digital marketing solutions. We empower organizations to adapt and thrive in a constantly evolving market by delivering innovative, high-quality solutions that meet their unique needs and drive their success. Our dedication to excellence, customer-centric approach, and commitment to continuous improvement make us the ideal partner for achieving your business goals.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End contain wrapp -->
+
+	<!-- Start contain wrapp -->
+	<div class="cta-wrapp primary-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<h4>Need help or have something to ask? Please contact us!</h4>
+					<p>If you have any questions or need assistance, don't hesitate to reach out to us. We're here to help and provide you with the support you need.</p>					
+				</div>
+				<div class="col-md-4">
+					<a class="btn btn-mandy btn-lg btn-3d btn-icon icon-divider" href="/contact.html"><i class="fa fa-envelope"></i>Get in touch with us</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End contain wrapp -->
+	
+<!-- Start footer -->
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-sm-6">
+				<div class="widget">
+					<h5><span>Noida</span> Office</h5>
+					<ul class="office-contact">
+						<li>
+							<i class="fa fa-home"></i>
+							<h6>Address :</h6>
+							Plot no 63, Shakti Khand 2, Indirapuram, Ghaziabad, Uttar Pradesh 201014
+						</li>
+						<li>
+							<i class="fa fa-phone"></i>
+							<h6>Phone :</h6>
+							(+91)9565153545
+						</li>
+						<li>
+							<i class="fa fa-envelope"></i>
+							<h6>Emali :</h6>
+							info@yourdomain.com
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-md-3 col-sm-6">
+				<div class="widget">
+					<h5><span>Ayodhya</span> Office</h5>
+					<ul class="office-contact">
+						<li>
+							<i class="fa fa-home"></i>
+							<h6>Address :</h6>
+							Narendra Puram, usru, Faizabad, Uttar Pradesh 224001
+						</li>
+						<li>
+							<i class="fa fa-phone"></i>
+							<h6>Phone :</h6>
+							(91) 9565153545
+						</li>
+						<li>
+							<i class="fa fa-envelope"></i>
+							<h6>Emali :</h6>
+							info@yourdomain.com
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-md-3 col-sm-6">
+				<div class="widget">
+					<h5><span>IT</span> Services</h5>
+					<ul class="link-list full">
+						<li><a href="#">Custom Web Designing</a></li>
+						<li><a href="#">Custom Software Development</a></li>
+						<li><a href="#">Mobile App Development</a></li>
+						<li><a href="#">Google Adword Marketing</a></li>
+						<li><a href="#">Search Engine Optimization</a></li>
+						<li><a href="#">Social Media Marketing</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<div class="widget">
+					<h5><span>Support</span> information</h5>
+					<ul class="link-list full">
+						<li><a href="#">Forum Support</a></li>
+						<li><a href="#">Help & FAQs</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Contact Us</a></li>
+						<li><a href="#">Pricing & Plans</a></li>
+						<li><a href="#">Cookies Policy</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<div class="widget">
+					<h5><span>Stay</span> Connected</h5>
+					<a href="#" class="social-network"><i class="fa fa-facebook"></i></a>
+					<a href="#" class="social-network"><i class="fa fa-twitter"></i></a>
+					<a href="#" class="social-network"><i class="fa fa-youtube-play"></i></a>
+					<a href="#" class="social-network"><i class="fa fa-instagram"></i></a>
+				</div>	
+			</div>
+		</div>
+	</div>
+	<div class="subfooter text-center">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<p>2024 &copy; Copyright <a href="/index.html">WebInix</a> All right reserved. Designed and developed by <a href="/about-alt1.html">WebInix Team</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- End footer -->
+ 
+	<!-- Start to top -->  
+    <!-- <a href="#" class="toTop">
+        <i class="fa fa-chevron-up"></i>
+    </a>   -->
+    <!-- End to top -->
+	
+	<!-- START JAVASCRIPT -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+	<script src="js/loading.js"></script>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+	
+    <!-- easing -->
+	<script src="js/jquery.easing-1.3.min.js"></script>
+	
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+	
+    <!-- Bootsnavs -->
+    <script src="js/bootsnav.js"></script>
+
+	<!-- Custom form -->
+	<script src="js/form/jcf.js"></script>
+	<script src="js/form/jcf.scrollable.js"></script>
+	<script src="js/form/jcf.select.js"></script>
+	
+	<!-- Custom checkbox and radio -->
+	<script src="js/checkator/fm.checkator.jquery.js"></script>
+	<script src="js/checkator/setting.js"></script>
+	
+	<!-- Select language -->
+	<script src="js/selectdropdown/jquery.dd.min.js"></script>
+	<script src="js/selectdropdown/setting.js"></script>
+
+    <!-- masonry -->
+	<script src="js/masonry/masonry.min.js"></script>	
+	<script src="js/masonry/masonry.filter.js"></script>
+	<script src="js/masonry/setting.js"></script> 
+	
+    <!-- PrettyPhoto -->
+	<script src="js/prettyPhoto/jquery.prettyPhoto.js"></script>  
+	<script src="js/prettyPhoto/setting.js"></script>
+
+    <!-- owl carousel -->
+	<script src="js/owlcarousel/owl.carousel.min.js"></script>  
+	<script src="js/owlcarousel/setting.js"></script>
+	
+    <!-- Flip -->
+	<script src="js/flip/flip.js"></script>
+	<script src="js/flip/setting.js"></script>
+	
+    <!-- Parallax -->
+	<script src="js/parallax/jquery.parallax-1.1.3.js"></script>
+	<script src="js/parallax/setting.js"></script>
+	
+    <!-- Twitter -->
+	<script src="js/twitter/tweetie.min.js"></script>
+	<script src="js/twitter/ticker.js"></script>
+	<script src="js/twitter/setting.js"></script>
+	
+    <!-- Custom -->
+    <script src="js/custom.js"></script>
+
+		
+  
+</body>
+</html>
