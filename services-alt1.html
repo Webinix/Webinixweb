@@ -47,6 +47,32 @@
 	</div>
 	<!-- End preloading -->
 
+	<a id="whatsappLink" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
+		<i class="fab fa-whatsapp"></i>
+	</a>	
+	<script>
+		// Function to generate a random token
+		function generateToken(length) {
+			const characters = '0123456789';
+			let token = '';
+			for (let i = 0; i < length; i++) {
+				token += characters.charAt(Math.floor(Math.random() * characters.length));
+			}
+			return token;
+		}
+		// Assign the token to the WhatsApp link
+		function setWhatsAppLink() {
+			const phone = '918595145268';
+			const message = 'Hello, I\'ve just visited your website and would like to know more. Reference Token: ';
+			const token = generateToken(5);
+			const link = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message + token)}`;
+			
+			document.getElementById('whatsappLink').href = link;
+		}
+		// Set the link on page load
+		window.onload = setWhatsAppLink;
+	</script>
+	
 	<!-- Start top section -->
 	<div class="top-wrapper">
 		<div class="container">
@@ -57,14 +83,14 @@
 						<li><a href="#"><i class="fa fa-instagram"></i></a></li>
 						<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
 					</ul>
-					<ul class="right-link sign-link">
-						<li><a href="faq.html">FAQ</a></li>
-						<li><a href="contact.html">Contact us</a></li>
-					</ul>
 				</div>
 				
 				<div class="col-md-6">
-					
+					<ul class="right-link sign-link">
+						<li><a href="career.html">Career</a></li>
+						<li><a href="faq.html">FAQ</a></li>
+						<li><a href="contact.html">Contact us</a></li>
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -72,7 +98,6 @@
 	<!-- End top section -->
 	
 	<div class="clearfix"></div>
-	
     <!-- Start Navigation -->
     <nav class="navbar navbar-default navbar-sticky bootsnav">
 
@@ -91,20 +116,20 @@
         <div class="container">            
             <!-- Start Header Navigation -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand" href="/index.html"><img src="img/brand/logo-black.png" class="logo" alt=""></a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+					<i class="fa fa-bars hamberg"></i>
+				</button>
+                <a class="navbar-brand" href="/"><img src="img/brand/logo-black.png" class="logo" alt=""></a>
             </div>
             <!-- End Header Navigation -->
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navbar-menu">
                 <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-                    <li ><a href="/index.html">Home</a></li>
+                    <li ><a href="/">Home</a></li>
                     <li class="active"><a href="services-alt1.html">Services</a></li>
 					<li><a href="about-alt1.html">About Us</a></li>
-                    <li><a href="/maintenance.html">Blogs</a></li>
+                    <li><a href="blog-rightsidebar.html">Blogs</a></li>
 
 					<li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Company</a>
@@ -284,7 +309,7 @@
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
 					<div class="section-heading text-center">
-						<h5>Testimoni</h5>
+						<h5>Testimonial</h5>
 						<p>Our <strong>satisfied</strong> customers</p>
 					</div>
 				</div>
@@ -324,23 +349,6 @@
 							</div>
 						</div>
 						<!-- End item 2 -->
-							
-						<!-- Start item 3 -->
-						<div class="item">
-							<div class="single-testimoni">
-								<blockquote class="centered">
-								<p>
-								No pro civibus <strong>oportere</strong>, laoreet vivendo lobortis ei has, ei usu <strong>deleniti instructior</strong>. No nemore utamur mea.
-								</p>
-								</blockquote>
-								<div class="testimoni-author">
-									<a href="#" class="avatar"><img src="img/testimoni/avatar03.jpg" class="avatar" alt="" /></a>
-									<h6>Ujang <span>helmn</span></h6>
-									<p>CEO - <a href="#">99webpage.com</a></p>
-								</div>
-							</div>
-						</div>
-						<!-- End item 3 -->
 					</div>
 				</div>
 			</div>
