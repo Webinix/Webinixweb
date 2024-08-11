@@ -364,16 +364,16 @@ Top section skins
 .top-wrapper.top-inverse{
 	background:#1c1e29;
 	border-bottom:1px solid #2f3544;
-	color:#828491;
+	color:#ffffff;
 }
 
 .top-wrapper.top-inverse .top-social-network li a,
 .top-wrapper.top-inverse .right-link li a{
-	color:#828491;
+	color:#ffffff;
 }
 
 .top-wrapper.top-inverse .right-link.sign-link li a.signup{
-	border:1px solid #828491;
+	border:1px solid #f8f9ff;
 }
 
 .top-wrapper.top-inverse .right-link.sign-link li a.signup:hover,
@@ -5426,7 +5426,7 @@ aside ul.link-list li.dropdown ul.dropdown-menu{
 	padding:0;
 	border:none;
   -webkit-box-shadow: none;
-          box-shadow: none;
+    box-shadow: none;
 }
 
 aside ul.link-list li.dropdown ul.dropdown-menu li{
@@ -5439,6 +5439,7 @@ aside ul.link-list li.dropdown ul.dropdown-menu li{
 
 aside ul.link-list li.dropdown ul.dropdown-menu li:last-child a{
 	padding-bottom:20px;
+	color: white !important;
 }
 
 aside ul.link-list li.dropdown ul.dropdown-menu li a,
@@ -5447,6 +5448,7 @@ aside ul.link-list li.dropdown ul.dropdown-menu li a,
 	font-weight:400;
 	border:none;
 	padding-left:0;
+	color: white !important;
 }
 
 aside ul.link-list li.dropdown ul.dropdown-menu li a:hover{
