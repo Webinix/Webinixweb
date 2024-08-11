@@ -750,6 +750,7 @@ Images
 }
 
 .parallax .thumbnail{
+	border-radius: 15px !important;
 	color:#858585;
 }
 
@@ -779,6 +780,7 @@ Images
 
 .gary-container .thumbnail.content-only .content,
 .parallax .thumbnail.content-only .content{
+	border-radius: 6px !important;
 	border:none;
 }
 

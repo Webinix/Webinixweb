@@ -12,7 +12,7 @@
 	<meta name="robots" content="index,follow">
     <link rel="icon" href="ico/favicon.png">
 
-    <title>WebInix Solution Pvt Ltd</title>
+    <title>WebInix Solutions | Software Development</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -48,9 +48,31 @@
 	</div>
 	<!-- End preloading -->
 
-    <a href="https://api.whatsapp.com/send?phone=918595145268&text=I%20have%20just%20come%20from%20the%20website" class="whatsapp-button">
+    <a id="whatsappLink" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
 		<i class="fab fa-whatsapp"></i>
-	</a>
+	</a>	
+	<script>
+		// Function to generate a random token
+		function generateToken(length) {
+			const characters = '0123456789';
+			let token = '';
+			for (let i = 0; i < length; i++) {
+				token += characters.charAt(Math.floor(Math.random() * characters.length));
+			}
+			return token;
+		}
+		// Assign the token to the WhatsApp link
+		function setWhatsAppLink() {
+			const phone = '918595145268';
+			const message = 'Hello, I\'ve just visited your website and would like to know more. Reference Token: ';
+			const token = generateToken(5);
+			const link = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message + token)}`;
+			
+			document.getElementById('whatsappLink').href = link;
+		}
+		// Set the link on page load
+		window.onload = setWhatsAppLink;
+	</script>
 	
 
 	<!-- Start top section -->
@@ -100,17 +122,17 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="/index.html"><img src="img/brand/logo-black.png" class="logo" alt=""></a>
+                <a class="navbar-brand" href="/"><img src="img/brand/logo-black.png" class="logo" alt=""></a>
             </div>
             <!-- End Header Navigation -->
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navbar-menu">
                 <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-                    <li ><a href="/index.html">Home</a></li>
+                    <li ><a href="/">Home</a></li>
                     <li><a href="services-alt1.html">Services</a></li>
 					<li><a href="about-alt1.html">About Us</a></li>
-                    <li><a href="/maintenance.html">Blogs</a></li>
+                    <li><a href="/underconstruction.html">Blogs</a></li>
 
 					<li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Company</a>
@@ -121,7 +143,7 @@
                         </ul>
                     </li>
 
-					<li><a href="portfolio-alt1.html">Portfolio</a></li>
+					<li><a href="underconstruction.html">Portfolio</a></li>
 					<li><a href="tel:+919565153545"><i class="fa fa-phone"></i> +91-9565153545</a></li>
 
                 </ul>

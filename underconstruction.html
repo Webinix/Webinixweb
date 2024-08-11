@@ -12,7 +12,8 @@
 	<meta name="robots" content="index,follow">
     <link rel="icon" href="ico/favicon.png">
 
-    <title>WebInix Technologies</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<title>WebInix Solutions | Software Development</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -43,6 +44,32 @@
 		</div>
 	</div>
 	<!-- End preloading -->
+
+	<a id="whatsappLink" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
+		<i class="fab fa-whatsapp"></i>
+	</a>	
+	<script>
+		// Function to generate a random token
+		function generateToken(length) {
+			const characters = '0123456789';
+			let token = '';
+			for (let i = 0; i < length; i++) {
+				token += characters.charAt(Math.floor(Math.random() * characters.length));
+			}
+			return token;
+		}
+		// Assign the token to the WhatsApp link
+		function setWhatsAppLink() {
+			const phone = '918595145268';
+			const message = 'Hello, I\'ve just visited your website and would like to know more. Reference Token: ';
+			const token = generateToken(5);
+			const link = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message + token)}`;
+			
+			document.getElementById('whatsappLink').href = link;
+		}
+		// Set the link on page load
+		window.onload = setWhatsAppLink;
+	</script>
 
     <!-- Start Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed no-background nav-static bootsnav">
