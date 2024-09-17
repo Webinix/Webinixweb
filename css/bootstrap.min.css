@@ -8411,7 +8411,7 @@ fieldset:disabled .btn {
     --bs-bg-opacity: 1
 }
 
-/*niwax template preview code - bg used .bg-gradient{background-image:var(--bs-gradient)!important}*/
+/*Webinix template preview code - bg used .bg-gradient{background-image:var(--bs-gradient)!important}*/
 
 .user-select-all {
     -webkit-user-select: all !important;

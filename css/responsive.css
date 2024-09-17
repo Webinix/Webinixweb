@@ -212,7 +212,7 @@
     .niwax-company-awards {
         grid-template-columns: 100%
     }
-    .whychooseniwax {
+    .whychooseWebinix {
         grid-template-columns: auto;
         grid-gap: 60px
     }
@@ -989,7 +989,7 @@
     .img-hro {
         margin-top: 30px
     }
-    .niwax {
+    .Webinix {
         transform: translate3d(0, 0, 0) !important
     }
     .shape-c1,
