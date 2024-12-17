@@ -252,7 +252,7 @@ span.circle2 {
 }
 
 .main-header.sticky {
-    height: 70px
+    height: 79px
 }
 
 .top-header {
@@ -580,7 +580,7 @@ div.custom-nav>ul>li.sbmenu>a:after {
 }
 
 .dsk-logo .nav-brand img {
-    max-height: 55px
+    max-height: 65px
 }
 
 .custom-nav .smfull {
@@ -5665,7 +5665,7 @@ body.hc-nav-open {
 }
 
 .logo-pre {
-    background: linear-gradient(to bottom, #fffce9 0, #ffe1ec 100%);
+    background: linear-gradient(to bottom, #ffffff 0, #ffffff 100%);
     border-radius: 50%;
     height: 100px;
     width: 100px;
@@ -6023,7 +6023,7 @@ html .pb140 {
 .text-effect-1 {
     background-image: -moz-linear-gradient(45deg, #ff3870 0, #ff3870 50%, #c300c3 100%);
     background-image: -webkit-linear-gradient(45deg, #ff3870 0, #ff3870 50%, #c300c3 100%);
-    background-image: linear-gradient(45deg, #ff3870 0, #ff3870 50%, #c300c3 100%);
+    background-image: linear-gradient(45deg, #248ccc 0, #248ccc 50%, #ffffff 100%);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text
