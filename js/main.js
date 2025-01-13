@@ -6,7 +6,7 @@
         disableAt: false,
         customToggle: c,
         levelSpacing: 10,
-        navTitle: "Webinix Menu",
+        navTitle: "Menu",
         levelTitles: true,
         levelTitles: true,
         labelClose: false,
