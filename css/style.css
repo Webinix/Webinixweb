@@ -6282,8 +6282,8 @@ html .pb140 {
 .bg-gradient7 {
     background: #ffe2e2;
     background: -moz-linear-gradient(top, #ffe2e2 0, #fff9f4 100%);
-    background: -webkit-linear-gradient(top, #ffe2e2 0, #fff9f4 100%);
-    background: linear-gradient(to bottom, #ffe2e2 0, #fff9f4 100%)
+    background: -webkit-linear-gradient(top, #e3f4ff  0, #fff9f4 100%);
+    /* background: linear-gradient(to bottom, #ffe2e2 0, #fff9f4 100%) */
 }
 
 .bg-gradient8 {
