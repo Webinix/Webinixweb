@@ -1,10 +1,13 @@
 {
   "name": "webinix",
   "version": "1.0.0",
+  "description": "Webinix - Digital Transformation Company Website",
   "scripts": {
-    "dev": "node index.js"
+    "dev": "npx http-server -p 8000 -o",
+    "start": "npx http-server -p 8000"
   },
   "dependencies": {
     "dotenv": "^16.4.7"
-  }
+  },
+  "devDependencies": {}
 }
