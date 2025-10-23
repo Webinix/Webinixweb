@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>AI Voice Bot Solutions | Webinix - Enterprise AI Services</title>
+    <title>Our Projects | Webinix - Enterprise AI & Technology Solutions</title>
     <meta name="description"
-        content="Transform customer interactions with intelligent AI Voice Bots. Webinix delivers enterprise-grade voice AI solutions powered by advanced NLP and speech recognition technology.">
-    <meta name="keywords" content="AI Voice Bot, Voice AI, Conversational AI, Speech Recognition, Voice Assistants, AI Customer Support">
+        content="Explore Webinix's portfolio of successful AI, web development, and digital transformation projects. View case studies, project documentation, and client success stories.">
+    <meta name="keywords" content="Projects, Portfolio, Case Studies, AI Projects, Web Development, Client Work">
     <meta name="author" content="rajesh-doot">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,6 +24,259 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
     <link href="css/darkmode.css" rel="stylesheet">
+    
+    <style>
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, #1e1e30 0%, #252540 100%);
+            border-radius: 16px;
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(0, 212, 255, 0.25);
+            border-color: rgba(0, 212, 255, 0.5);
+        }
+
+        .project-thumbnail {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-thumbnail i {
+            font-size: 80px;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .project-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .project-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0;
+        }
+
+        .project-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-view-pdf {
+            flex: 1;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-view-pdf:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+            color: #fff;
+        }
+
+        .btn-download {
+            background: rgba(0, 212, 255, 0.1);
+            color: #00d4ff;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-download:hover {
+            background: rgba(0, 212, 255, 0.2);
+            color: #00d4ff;
+        }
+
+        /* PDF Modal */
+        .pdf-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 10000;
+            padding: 20px;
+        }
+
+        .pdf-modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pdf-modal-content {
+            background: #fff;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 1200px;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pdf-modal-header {
+            padding: 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .pdf-modal-header h3 {
+            margin: 0;
+            color: #333;
+            font-size: 20px;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: #666;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .close-modal:hover {
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        .pdf-viewer {
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .pdf-viewer iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            pointer-events: auto;
+        }
+
+        /* Disable right-click on PDF viewer */
+        .pdf-viewer {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* Watermark overlay */
+        .watermark-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            overflow: hidden;
+        }
+
+        .watermark-text {
+            position: absolute;
+            font-size: 48px;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.15);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            transform: rotate(-45deg);
+            white-space: nowrap;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        /* Create watermark pattern */
+        .watermark-overlay::before,
+        .watermark-overlay::after {
+            content: '© WEBINIX - CONFIDENTIAL';
+            position: absolute;
+            font-size: 36px;
+            font-weight: 900;
+            color: rgba(0, 0, 0, 0.08);
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.1);
+            transform: rotate(-45deg);
+            white-space: nowrap;
+            letter-spacing: 8px;
+        }
+
+        .watermark-overlay::before {
+            top: 20%;
+            left: 10%;
+        }
+
+        .watermark-overlay::after {
+            bottom: 20%;
+            right: 10%;
+        }
+
+        @media (max-width: 768px) {
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pdf-modal-content {
+                height: 95vh;
+            }
+        }
+
+        .no-projects {
+            text-align: center;
+            padding: 80px 20px;
+            color: #b0b0b0;
+        }
+
+        .no-projects i {
+            font-size: 80px;
+            color: rgba(0, 212, 255, 0.3);
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -32,7 +285,7 @@
         <div class="pre-content">
             <div class="logo-pre"><img src="images/logo/single_logo-removebg-preview.png" alt="Logo"
                     class="img-fluid" /></div>
-            <div class="pre-text- text-radius  text-animation bg-b">AI Voice Bot Solutions</div>
+            <div class="pre-text- text-radius  text-animation bg-b">Our Projects</div>
         </div>
     </div>
     <!--End Preloader -->
@@ -140,6 +393,9 @@
                             </div>
                         </li>
 
+                        <li class="sbmenu">
+                            <a href="projects.html" class="menu-links">Projects</a>
+                        </li>
 
                     </ul>
                     <ul class="nav-list right-end-btn">
@@ -191,6 +447,9 @@
                             </div>
                         </div>
                     </li>
+                    <li class="sbmenu">
+                        <a href="projects.html" class="menu-links">Projects</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -227,7 +486,6 @@
                                 <option value="">Select Requirement</option>
                                 <option value="ai">AI Solutions</option>
                                 <option value="web">Website Development</option>
-                                <option value="marketing">Digital Marketing</option>
                             </select>
                             <div class="help-block with-errors"></div>
                         </div>
@@ -244,7 +502,7 @@
             </div>
             <div class="getintouchblock mt30">
                 <h4>Get In Touch</h4>
-                <p class="mt10">Transform your customer service with AI Voice Bot technology.</p>
+                <p class="mt10">Explore our successful projects and case studies.</p>
                 <div class="media mt15">
                     <div class="icondive"><img src="images/icons/call.svg" alt="icon"></div>
                     <div class="media-body getintouchinfo">
@@ -272,11 +530,11 @@
                             <div class="bread-menu">
                                 <ul>
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="#">AI Voice Bot Solutions</a></li>
+                                    <li><a href="#">Our Projects</a></li>
                                 </ul>
                             </div>
                             <div class="bread-title">
-                                <h2>AI Voice Bot Solutions</h2>
+                                <h2>Our Projects Portfolio</h2>
                             </div>
                         </div>
                     </div>
@@ -286,121 +544,43 @@
     </section>
     <!--End Breadcrumb-->
 
-    <!--Start Service Details-->
-    <section class="service pad-tb">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 block-1">
-                    <div class="common-heading text-l pr25">
-                        <h4>AI Voice Bot Development Services</h4>
-                        <p>At Webinix, we create intelligent AI Voice Bots that revolutionize customer interactions through natural language processing and advanced speech recognition. Our enterprise-grade voice AI solutions deliver 24/7 automated customer support, reduce operational costs, and enhance user experience across all touchpoints.</p>
-                        
-                        <h5 class="mt30 mb10">What is an AI Voice Bot?</h5>
-                        <p>An AI Voice Bot is an intelligent conversational agent that uses natural language processing (NLP), speech recognition, and text-to-speech technology to communicate with users through voice. Unlike traditional IVR systems, AI voice bots understand context, intent, and sentiment, providing human-like conversations that resolve customer queries efficiently.</p>
-
-                        <h5 class="mt30 mb10">Key Features of Our AI Voice Bots</h5>
-                        <ul class="list-style-">
-                            <li><strong>Natural Language Understanding (NLU):</strong> Advanced NLP algorithms that understand user intent, context, and sentiment with 95%+ accuracy.</li>
-                            <li><strong>Multi-Language Support:</strong> Seamlessly handle conversations in 50+ languages with dialect and accent recognition.</li>
-                            <li><strong>Voice Biometrics:</strong> Secure authentication using voice recognition for enhanced security and personalization.</li>
-                            <li><strong>Emotion Detection:</strong> AI-powered sentiment analysis to detect customer emotions and adapt responses accordingly.</li>
-                            <li><strong>Omnichannel Integration:</strong> Deploy across phone systems, mobile apps, web applications, and smart devices.</li>
-                            <li><strong>Context Retention:</strong> Maintain conversation history and context across multiple interactions for seamless experiences.</li>
-                            <li><strong>Real-time Analytics:</strong> Track KPIs, conversation metrics, and customer satisfaction in real-time dashboards.</li>
-                            <li><strong>Human Handoff:</strong> Intelligent escalation to human agents when complex issues require personal attention.</li>
-                        </ul>
-
-                        <h5 class="mt30 mb10">Our Voice Bot Development Process</h5>
-                        <ul class="list-style-">
-                            <li><strong>Discovery & Use Case Analysis:</strong> We analyze your business requirements, customer journey, and identify optimal use cases for voice automation.</li>
-                            <li><strong>Conversation Design:</strong> Our UX experts design natural, intuitive conversation flows that align with your brand voice and customer expectations.</li>
-                            <li><strong>NLP Model Training:</strong> Custom training of language models on your domain-specific data for accurate intent recognition and entity extraction.</li>
-                            <li><strong>Integration & Development:</strong> Seamless integration with your CRM, telephony systems, databases, and business applications.</li>
-                            <li><strong>Testing & Optimization:</strong> Rigorous testing across accents, languages, and edge cases with continuous optimization based on real conversations.</li>
-                            <li><strong>Deployment & Monitoring:</strong> Secure deployment with 24/7 monitoring, performance tracking, and continuous improvement through machine learning.</li>
-                        </ul>
-
-                        <h5 class="mt30 mb10">Use Cases & Applications</h5>
-                        <ul class="list-style-">
-                            <li><strong>Customer Support Automation:</strong> Handle inquiries, troubleshooting, account information, and FAQs without human intervention.</li>
-                            <li><strong>Appointment Scheduling:</strong> Automated booking, rescheduling, and reminders for healthcare, salons, and service businesses.</li>
-                            <li><strong>Order Management:</strong> Voice-enabled order placement, tracking, modifications, and returns for e-commerce platforms.</li>
-                            <li><strong>Lead Qualification:</strong> Intelligent lead capture, qualification, and routing to appropriate sales teams.</li>
-                            <li><strong>Survey & Feedback Collection:</strong> Automated customer satisfaction surveys with natural voice conversations.</li>
-                            <li><strong>Payment Processing:</strong> Secure voice-based payment collection with PCI-DSS compliance.</li>
-                            <li><strong>Technical Support:</strong> Step-by-step troubleshooting guidance for technical products and services.</li>
-                            <li><strong>Voice Commerce:</strong> Enable hands-free shopping experiences through smart speakers and voice assistants.</li>
-                        </ul>
-
-                        <h5 class="mt30 mb10">Technology Stack</h5>
-                        <ul class="list-style-">
-                            <li><strong>Speech Recognition:</strong> Google Cloud Speech-to-Text, AWS Transcribe, Azure Speech Services, Whisper AI</li>
-                            <li><strong>NLP Platforms:</strong> DialogFlow, Rasa, Amazon Lex, IBM Watson, Custom Transformer Models</li>
-                            <li><strong>Text-to-Speech:</strong> Amazon Polly, Google Cloud TTS, Azure Neural TTS, ElevenLabs</li>
-                            <li><strong>LLM Integration:</strong> GPT-4, Claude, Gemini for advanced conversational capabilities</li>
-                            <li><strong>Telephony Integration:</strong> Twilio, Vonage, Plivo, SIP Trunking</li>
-                            <li><strong>Analytics:</strong> Custom dashboards, Google Analytics, Mixpanel, Tableau</li>
-                        </ul>
-
-                        <h5 class="mt30 mb10">Benefits of AI Voice Bots</h5>
-                        <ul class="list-style-">
-                            <li><strong>Cost Reduction:</strong> Reduce customer service costs by 60-80% through intelligent automation</li>
-                            <li><strong>24/7 Availability:</strong> Provide round-the-clock support without additional staffing costs</li>
-                            <li><strong>Scalability:</strong> Handle thousands of concurrent conversations during peak periods</li>
-                            <li><strong>Faster Resolution:</strong> Average handling time reduced by 40-60% compared to human agents</li>
-                            <li><strong>Consistency:</strong> Deliver uniform brand experience across all customer interactions</li>
-                            <li><strong>Data Insights:</strong> Capture and analyze 100% of conversations for business intelligence</li>
-                            <li><strong>Employee Satisfaction:</strong> Free human agents to focus on complex, high-value interactions</li>
-                            <li><strong>Global Reach:</strong> Expand customer support to international markets with multilingual capabilities</li>
-                        </ul>
-
-                        <h5 class="mt30 mb10">Industries We Serve</h5>
-                        <p>Healthcare, Banking & Finance, E-commerce, Telecommunications, Insurance, Travel & Hospitality, Real Estate, Automotive, Education, Government Services</p>
-
-                        <h5 class="mt30 mb10">Why Choose Webinix for Voice Bot Development?</h5>
-                        <ul class="list-style-">
-                            <li>5+ years of experience in conversational AI and voice technology</li>
-                            <li>Custom solutions tailored to your specific business requirements</li>
-                            <li>Enterprise-grade security and compliance (GDPR, HIPAA, PCI-DSS)</li>
-                            <li>Proven track record with 50+ successful voice bot implementations</li>
-                            <li>Continuous optimization and improvement through ML algorithms</li>
-                            <li>Dedicated support team for training, maintenance, and enhancements</li>
-                            <li>Flexible deployment options: Cloud, On-premise, or Hybrid</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="image-block upset bg-shape m-mt30 mb0">
-                        <img src="images/icons/crm.png" alt="AI Voice Bot by Webinix" class="img-fluid" style="padding: 40px;" />
-                    </div>
-                    <div class="service-card mt30">
-                        <h5 class="mb20">Quick Contact</h5>
-                        <p>Get started with AI Voice Bot solutions today</p>
-                        <a href="get-quote.html" class="btn-main bg-btn5 lnk mt20">Request a Demo<i
-                                class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--End Service Details-->
-
-    <!--Start CTA-->
-    <section class="cta-area pad-tb">
+    <!--Start Projects Section-->
+    <section class="service pad-tb" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="common-heading">
-                        <h2>Ready to Transform Customer Interactions with AI Voice Bots?</h2>
-                        <a href="get-quote.html" class="btn-outline">Get Started Now <i
-                                class="fas fa-chevron-right fa-icon"></i></a>
-                        <p class="cta-call mt20">Or call us at <a href="tel:+918700258968">+91-8700258968</a></p>
+                    <div class="common-heading text-center">
+                        <h2 class="mb20" style="color: #fff; font-size: 42px; font-weight: 700;">Explore Our Work</h2>
+                        <p style="color: #e0e0e0; font-size: 18px; line-height: 1.8;">View our portfolio of successful projects, case studies, and client deliverables.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="row mt-5">
+                <div class="col-lg-12">
+                    <div class="project-grid" id="projectsGrid">
+                        <!-- Projects will be loaded here dynamically -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!--End CTA-->
+    <!--End Projects Section-->
+
+    <!-- PDF Modal -->
+    <div class="pdf-modal" id="pdfModal">
+        <div class="pdf-modal-content">
+            <div class="pdf-modal-header">
+                <h3 id="modalTitle">Project Document</h3>
+                <button class="close-modal" onclick="closePDFModal()">&times;</button>
+            </div>
+            <div class="pdf-viewer">
+                <iframe id="pdfViewer" src=""></iframe>
+                <div class="watermark-overlay" id="watermarkOverlay"></div>
+            </div>
+        </div>
+    </div>
 
     <!--Start Footer-->
     <footer class="dark-footer dg-bg--1 pt60 nshape dark-footer-1">
@@ -435,12 +615,12 @@
                     </ul>
                 </div>
                 <div class="col-lg-2 col-sm-6">
-                    <h5 class="mb30 mt30">AI Solutions</h5>
+                    <h5 class="mb30 mt30">Quick Links</h5>
                     <ul class="footer-address-list link-hover">
-                        <li><a href="ai-voice-bot.html">AI Voice Bot</a></li>
-                        <li><a href="nlp-search.html">NLP Search</a></li>
-                        <li><a href="generative-chatbot.html">Generative Chatbot</a></li>
-                        <li><a href="rag-based-ai.html">RAG Based AI</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-2.html">About Us</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="get-quote.html">Get Quote</a></li>
                     </ul>
                 </div>
             </div>
@@ -468,6 +648,236 @@
     <script src="js/preloader.js"></script>
     <script src="js/dark-mode.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        // Project data - Add your projects here
+        const projects = [
+            {
+                title: "Astrologer Platform",
+                description: "Complete astrology consultation platform with booking system and personalized horoscope features.",
+                tags: ["Web Development", "E-commerce", "Booking System"],
+                pdfPath: "pdfs/Asrtologer.pdf",
+                thumbnail: ""
+            },
+            {
+                title: "Clothing E-commerce Store",
+                description: "Modern fashion e-commerce platform with advanced filtering, cart management and payment integration.",
+                tags: ["E-commerce", "Fashion", "Shopping"],
+                pdfPath: "pdfs/Clothing.pdf",
+                thumbnail: ""
+            },
+            {
+                title: "Clothings II - Fashion Retail",
+                description: "Enhanced clothing retail platform with inventory management and customer personalization features.",
+                tags: ["E-commerce", "Retail", "Fashion"],
+                pdfPath: "pdfs/Clothings II.pdf",
+                thumbnail: ""
+            },
+            {
+                title: "Helmet Safety Equipment Store",
+                description: "E-commerce platform for safety helmets and protective gear with detailed product specifications.",
+                tags: ["E-commerce", "Safety Equipment", "Retail"],
+                pdfPath: "pdfs/helmet.pdf",
+                thumbnail: ""
+            },
+            {
+                title: "HRMLESS V1 - HR Management System",
+                description: "Comprehensive Human Resource Management system with employee tracking, payroll and attendance modules.",
+                tags: ["Enterprise", "HR Management", "SaaS"],
+                pdfPath: "pdfs/HRMLESS_V1.pdf",
+                thumbnail: ""
+            },
+            {
+                title: "Jewellery II - Luxury Collection",
+                description: "Premium jewellery showcase platform with high-quality galleries and custom design consultation.",
+                tags: ["E-commerce", "Jewellery", "Luxury"],
+                pdfPath: "pdfs/Jwellery II.pdf",
+                thumbnail: ""
+            },
+            {
+                title: "Jewellery III - Designer Collection",
+                description: "Designer jewellery platform featuring exclusive collections with virtual try-on capabilities.",
+                tags: ["E-commerce", "Jewellery", "Designer"],
+                pdfPath: "pdfs/Jwellery III.pdf",
+                thumbnail: ""
+            },
+            {
+                title: "Landing Page Design",
+                description: "Modern and conversion-optimized landing page with engaging UI/UX and call-to-action sections.",
+                tags: ["Web Design", "Landing Page", "Marketing"],
+                pdfPath: "pdfs/landing page.pdf",
+                thumbnail: ""
+            },
+            {
+                title: "Property Management System",
+                description: "Real estate property listing and management platform with advanced search and booking features.",
+                tags: ["Real Estate", "Property", "Management"],
+                pdfPath: "pdfs/Property.pdf",
+                thumbnail: ""
+            },
+            {
+                title: "Sports Equipment Store",
+                description: "Sports and fitness equipment e-commerce platform with category filters and product comparisons.",
+                tags: ["E-commerce", "Sports", "Fitness"],
+                pdfPath: "pdfs/Sports.pdf",
+                thumbnail: ""
+            },
+            {
+                title: "V2 Platform",
+                description: "Enhanced web application platform with improved features and modern architecture.",
+                tags: ["Web Development", "Platform", "Modern"],
+                pdfPath: "pdfs/v2.pdf",
+                thumbnail: ""
+            }
+        ];
+
+        // Function to load projects
+        function loadProjects() {
+            const grid = document.getElementById('projectsGrid');
+            
+            if (projects.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-12">
+                        <div class="no-projects">
+                            <i class="fas fa-folder-open"></i>
+                            <h3 style="color: #fff; margin-top: 20px;">No Projects Yet</h3>
+                            <p>Add your project PDFs to display them here.</p>
+                        </div>
+                    </div>
+                `;
+                return;
+            }
+
+            projects.forEach((project, index) => {
+                const projectCard = `
+                    <div class="project-card">
+                        <div class="project-thumbnail" style="${project.thumbnail ? `background-image: url(${project.thumbnail});` : ''}">
+                            ${!project.thumbnail ? '<i class="fas fa-file-pdf"></i>' : ''}
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">${project.title}</h3>
+                            <div class="project-actions">
+                                <button class="btn-view-pdf" onclick="openPDFModal('${project.pdfPath}', '${project.title}')">
+                                    <i class="fas fa-eye"></i> View PDF
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                grid.innerHTML += projectCard;
+            });
+        }
+
+        // Function to open PDF modal
+        function openPDFModal(pdfPath, title) {
+            const modal = document.getElementById('pdfModal');
+            const viewer = document.getElementById('pdfViewer');
+            const modalTitle = document.getElementById('modalTitle');
+            
+            // Add #toolbar=0 to disable PDF controls (download, print, sidebar)
+            viewer.src = pdfPath + '#toolbar=0&navpanes=0&scrollbar=1';
+            modalTitle.textContent = title;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            // Generate watermarks
+            generateWatermarks();
+        }
+
+        // Function to generate multiple watermarks
+        function generateWatermarks() {
+            const overlay = document.getElementById('watermarkOverlay');
+            overlay.innerHTML = ''; // Clear existing watermarks
+            
+            const watermarkText = '© WEBINIX - CONFIDENTIAL';
+            const rows = 6;
+            const cols = 4;
+            
+            for (let i = 0; i < rows; i++) {
+                for (let j = 0; j < cols; j++) {
+                    const watermark = document.createElement('div');
+                    watermark.className = 'watermark-text';
+                    watermark.textContent = watermarkText;
+                    watermark.style.top = `${(i * 100 / rows) + 5}%`;
+                    watermark.style.left = `${(j * 100 / cols) - 10}%`;
+                    overlay.appendChild(watermark);
+                }
+            }
+        }
+
+        // Function to close PDF modal
+        function closePDFModal() {
+            const modal = document.getElementById('pdfModal');
+            const viewer = document.getElementById('pdfViewer');
+            
+            modal.classList.remove('active');
+            viewer.src = '';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closePDFModal();
+            }
+        });
+
+        // Close modal when clicking outside
+        document.getElementById('pdfModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closePDFModal();
+            }
+        });
+
+        // Disable right-click context menu on PDF viewer
+        document.getElementById('pdfModal').addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            return false;
+        });
+
+        // Prevent screenshot keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            // Prevent PrintScreen
+            if (e.key === 'PrintScreen') {
+                e.preventDefault();
+                alert('Screenshots are disabled for confidential content!');
+                return false;
+            }
+            
+            // Prevent Ctrl+P (Print)
+            if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                e.preventDefault();
+                alert('Printing is disabled for confidential content!');
+                return false;
+            }
+            
+            // Prevent Ctrl+S (Save)
+            if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+                e.preventDefault();
+                return false;
+            }
+            
+            // Prevent F12, Ctrl+Shift+I (Developer tools)
+            if (e.key === 'F12' || ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'I')) {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        // Detect if user tries to take screenshot (on blur)
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                const modal = document.getElementById('pdfModal');
+                if (modal.classList.contains('active')) {
+                    document.getElementById('watermarkOverlay').style.opacity = '1';
+                }
+            }
+        });
+
+        // Load projects on page load
+        document.addEventListener('DOMContentLoaded', loadProjects);
+    </script>
 </body>
 
 </html>
+
